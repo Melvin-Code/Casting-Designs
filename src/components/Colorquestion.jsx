@@ -47,7 +47,7 @@ class Colorquestion extends Component {
       },
     });
     return (
-      <div>
+      <div className='color-box'>
         <div>
           <div style={styles.swatch} onClick={this.handleClick}>
             <div style={styles.color} />

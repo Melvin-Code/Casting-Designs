@@ -24,9 +24,9 @@ class App extends Component {
       
         <div className="App">
           <div className='logo-box'>
-            <img src='/2.png' alt='logo'/>
+            <img className='logo' src='/2.png' alt='logo'/>
           </div>
-          <form onSubmit={this.handleSubmit}>
+          <form className='form' onSubmit={this.handleSubmit}>
             <Question
               function={this.handleChange}
               question="Describe your business in a few sentences. *"
@@ -74,16 +74,16 @@ class App extends Component {
             />
 
             <Datequestion question="What is the latest you want the project done *" />
-            <div>
-              <label>
+            <div className='question'>
+              <label className='question-label'>
                 Choose or type three colors that you will like in your website(note you can also type hex or rgba color code to choose your color)
               </label>
-              <div>
+              <div className='color-holder'>
                 <Colorquestion question="sup" />
                 <Colorquestion2 />
                 <Colorquestion3 />
               </div>
-              <button type="submit">Submit</button>
+              <button className='submit-button' type="submit">Submit</button>
             </div>
           </form>
           {console.log(this.state)}

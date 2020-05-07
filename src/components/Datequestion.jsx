@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 class Datequestion extends Component {
     render() {
         return (
-            <div>
+            <div className='question'>
                
-            <label>{this.props.question}</label>
-            <input type='Date' name={this.props.question} placeholder='Write here'></input>
+            <label className='question-label' >{this.props.question}</label>
+            <input className='question-input' type='Date' name={this.props.question} placeholder='Write here'></input>
             
             </div>
         );
