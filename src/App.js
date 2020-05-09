@@ -21,8 +21,11 @@ class App extends Component {
   render() {
     // console.log(this.state)
     return (
-      <div>
+      
         <div className="App">
+          <div className='logo-box'>
+            <img src='/2.png' alt='logo'/>
+          </div>
           <form onSubmit={this.handleSubmit}>
             <Question
               function={this.handleChange}
@@ -73,7 +76,7 @@ class App extends Component {
             <Datequestion question="What is the latest you want the project done *" />
             <div>
               <label>
-                Choose three colors that you will like in your website
+                Choose or type three colors that you will like in your website(note you can also type hex or rgba color code to choose your color)
               </label>
               <div>
                 <Colorquestion question="sup" />
@@ -85,7 +88,7 @@ class App extends Component {
           </form>
           {console.log(this.state)}
         </div>
-      </div>
+      
     );
   }
 }
