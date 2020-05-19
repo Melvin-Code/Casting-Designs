@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { SketchPicker } from "react-color";
 import reactCSS from "reactcss";
-class Colorquestion extends Component {
+class Colorquestion2 extends Component {
   state = {
     displayColorPicker: false,
     background: "blue",
@@ -53,7 +53,7 @@ class Colorquestion extends Component {
             <div style={styles.color} />
           </div>
           {this.state.displayColorPicker ? (
-            <div  style={styles.popover}>
+            <div style={styles.popover}>
               <div style={styles.cover} onClick={this.handleClose} />
               <SketchPicker
                 color={this.state.background}
@@ -62,10 +62,9 @@ class Colorquestion extends Component {
             </div>
           ) : null}
         </div>
-        {console.log(this.state.background)}
       </div>
     );
   }
 }
 
-export default Colorquestion;
+export default Colorquestion2;
