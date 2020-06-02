@@ -1,0 +1,18 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Alice-Regular
+font link: https://fonts.google.com/specimen/Alice
+font author: Ksenia Erulevich
+font author site: http://www.cyreal.org/
+Slogan Font: Alice-Regular
+
+icon designer: Leadway Global LLC
+icon designer link: /irisi.tole
+        
+
+fontColor: {"hex":"#ffffff"}
+bgColor: {"gradient-0":"#820B7D","gradient-1":"#7751A4"}
+iconColor: {"hex":"#ffffff"}
+sloganColor: {"hex":"#ffffff"}
+      

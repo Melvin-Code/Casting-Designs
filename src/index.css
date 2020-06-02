@@ -21,5 +21,21 @@ html{
 
 .logo-box{
   overflow: hidden;
-  height: 5rem;
+  height: 9rem;
+  background-color: #38b6ff;
+}
+.logo-box .logo{
+  height: 40rem;
+  position: relative;
+  top: 4.5rem;
+  transform: translateY(-47.5%);
+}
+
+.question{
+  border: 1px solid;
+  border-color: cyan;
+  background-color: darkcyan;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
 }
