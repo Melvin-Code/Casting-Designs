@@ -18,18 +18,17 @@ code {
 html{
   font-size: 62.5%;
 }
+button{
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2.2rem;
+}
 
-.logo-box{
-  overflow: hidden;
-  height: 9rem;
-  background-color: #38b6ff;
-}
-.logo-box .logo{
-  height: 40rem;
-  position: relative;
-  top: 4.5rem;
-  transform: translateY(-47.5%);
-}
+/*////////////////////Questions////////////////////////////*/
+/*////////////////////Questions////////////////////////////*/
+/*////////////////////Questions////////////////////////////*/
+
 
 .question{
   border: 1px solid;
@@ -39,3 +38,186 @@ html{
   display: flex;
   justify-content: center;
 }
+
+/*////////////////////Questions////////////////////////////*/
+/*////////////////////Questions////////////////////////////*/
+/*////////////////////Questions////////////////////////////*/
+
+
+/*////////////////////NavBar////////////////////////////*/
+/*////////////////////NavBar////////////////////////////*/
+/*////////////////////NavBar////////////////////////////*/
+.navbar {
+  position: relative;
+  display: flex;
+  /* background-image: linear-gradient(to bottom right, darkblue, purple); */
+  background-color: transparent;
+  justify-content: space-around;
+  align-items: center;
+  height: 7vh;
+  /* box-shadow: -6px -4px 13px 0px black; */
+  position: fixed;
+  z-index: 30;
+  width: 100%;
+}
+.navbar .navbar-box{
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60rem
+}
+.navbar .navbar-box .link{
+  text-decoration: none;
+  color: white;
+  font-size: 2.2rem;
+  transition: all .5s;
+  width: auto;
+}
+
+
+/*////////////////////NavBar////////////////////////////*/
+/*////////////////////NavBar////////////////////////////*/
+/*////////////////////NavBar////////////////////////////*/
+
+
+/*////////////////////Landing page////////////////////////////*/
+/*////////////////////Landing page////////////////////////////*/
+/*////////////////////Landing page////////////////////////////*/
+.lan-page{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.lan-page .Fly-logo-box{
+  position: absolute;
+  top: 43%;
+  right: 50%;
+  transform: translate(50%, -40%);
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  width: 31rem;
+  height: 20rem;
+  animation-name: Flying;
+  animation-duration: 3s;
+}
+
+
+.lan-page .Fly-logo-box .logo{
+  width: 15rem;
+  animation-name: FlyingLogo;
+  animation-duration: 3s;
+}
+
+.lan-page .Fly-logo-box .co-name{
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+  font-weight: 500;
+  padding-left: 1rem;
+}
+.lan-page .Fly-logo-box .co-name .co-name-dwn{
+  transform: translateY(-17%);
+}
+
+.lan-page .learn-mor-box{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-name: learning;
+  animation-duration: 3s;
+}
+.lan-page .learn-mor-box .learn-mor-btn{
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
+  width: 31rem;
+  animation-name: expanding;
+  animation-duration: 3s;
+  transition: .5s;
+}
+.lan-page .learn-mor-box .learn-mor-btn:hover{
+  background-color: rgba(255, 255, 255, 0.507);
+}
+
+@keyframes Flying{
+  0%{
+    top: 43%;
+  right: 110%;
+  transform: translate(50%, -40%);
+    width: 16rem;
+    /* transform: rotate(90deg); */
+  }
+  60%{
+    top: 43%;
+  right: 50%;
+  transform: translate(50%, -40%);
+    width: 16rem;
+    /* transform: rotate(0deg); */
+  }
+  100%{
+    top: 43%;
+  right: 50%;
+  transform: translate(50%, -40%);
+    width: 31rem;
+    /* transform: rotate(0deg); */
+  }
+
+}
+@keyframes learning{
+  0%{
+    top: 110%;
+    
+  }
+  50%{
+    top: 55%;
+    
+  }
+  100%{
+    top: 55%;
+    
+  }
+}
+@keyframes expanding{
+  0%{
+    
+    width: 18rem;
+  }
+  50%{
+    
+    width: 18rem;
+  }
+  100%{
+    
+    width: 30rem;
+  }
+}
+@keyframes FlyingLogo{
+  0%{
+    transform: rotate(90deg);
+  }
+  40%{
+    
+    transform: rotate(90deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+/*////////////////////Landing page////////////////////////////*/
+/*////////////////////Landing page////////////////////////////*/
+/*////////////////////Landing page////////////////////////////*/
+
+/*////////////////////Buttons////////////////////////////*/
+/*////////////////////Buttons////////////////////////////*/
+/*////////////////////Buttons////////////////////////////*/
+
+
+
+/*////////////////////Buttons////////////////////////////*/
+/*////////////////////Buttons////////////////////////////*/
+/*////////////////////Buttons////////////////////////////*/

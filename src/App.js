@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NavBar from "./components/partials/LandingpageCom/Navbar";
 
+import LandingPage from "./components/LandingPage";
 class App extends Component {
   state = {};
 
@@ -16,11 +19,12 @@ class App extends Component {
   render() {
     // console.log(this.state)
     return (
-      
+      <Router>
         <div id='aBk' className="App bg">
-          
+          <NavBar/>
+          <LandingPage/>
         </div>
-      
+        </Router>
     );
   }
 }
