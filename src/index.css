@@ -54,7 +54,7 @@ button{
   background-color: transparent;
   justify-content: space-around;
   align-items: center;
-  height: 7vh;
+  height: 15vh;
   /* box-shadow: -6px -4px 13px 0px black; */
   position: fixed;
   z-index: 30;
@@ -71,10 +71,45 @@ button{
 .navbar .navbar-box .link{
   text-decoration: none;
   color: white;
-  font-size: 2.2rem;
+  font-size: 2.8rem;
+  font-weight: bolder;
   transition: all .5s;
   width: auto;
 }
+.navbar .Fly-logo-box{
+  position: absolute;
+  top: 1rem;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  width: 26rem;
+  height: 10rem;
+  animation-name: Flying;
+  animation-duration: 2s;
+  
+}
+
+
+.navbar .Fly-logo-box .logo{
+  width: 12rem;
+  animation-name: FlyingLogo;
+  animation-duration: 2s;
+  
+}
+
+.navbar .Fly-logo-box .co-name{
+  display: flex;
+  flex-direction: column;
+  font-size: 3.5rem;
+  font-weight: bold;
+  padding-left: 1rem;
+}
+.navbar .Fly-logo-box .co-name .co-name-dwn{
+  transform: translateY(-17%);
+}
+
 
 
 /*////////////////////NavBar////////////////////////////*/
@@ -90,134 +125,130 @@ button{
   width: 100vw;
   position: relative;
 }
-.lan-page .Fly-logo-box{
-  position: absolute;
-  top: 43%;
-  right: 50%;
-  transform: translate(50%, -40%);
-  display: flex;
-  align-items: center;
-  color: white;
-  overflow: hidden;
-  width: 31rem;
-  height: 20rem;
-  animation-name: Flying;
-  animation-duration: 3s;
-}
-
-
-.lan-page .Fly-logo-box .logo{
-  width: 15rem;
-  animation-name: FlyingLogo;
-  animation-duration: 3s;
-}
-
-.lan-page .Fly-logo-box .co-name{
-  display: flex;
-  flex-direction: column;
-  font-size: 4rem;
-  font-weight: 500;
-  padding-left: 1rem;
-}
-.lan-page .Fly-logo-box .co-name .co-name-dwn{
-  transform: translateY(-17%);
-}
 
 .lan-page .learn-mor-box{
   position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translateX(-50%);
-  animation-name: learning;
-  animation-duration: 3s;
+  top: 33%;
+  left: 73%;
+  transform: translateX(-100%);
+  animation-name: magicText;
+  animation-duration: 2s;
+  
+  width: 62rem;
+  height: 32rem;
+  overflow: hidden;
+  /* transition: 2s; */
 }
-.lan-page .learn-mor-box .learn-mor-btn{
-  border-top: solid 2px white;
-  border-bottom: solid 2px white;
-  width: 31rem;
-  animation-name: expanding;
-  animation-duration: 3s;
-  transition: .5s;
+/* .lan-page .learn-mor-box:hover{
+  width: 62rem;
+  
+} */
+.learn-mor-box .intro-text{
+  color: white;
+  font-size: 5rem;
+  font-weight: bolder;
+  width: auto;
+  
 }
-.lan-page .learn-mor-box .learn-mor-btn:hover{
-  background-color: rgba(255, 255, 255, 0.507);
+.learn-mor-box .intro-text .sub-text{
+  font-size: 3rem;
+  font-weight: bolder;
+  margin: 3rem 0 ;
+  display: block;
 }
 
-@keyframes Flying{
+/*////////////////////Landing page////////////////////////////*/
+/*////////////////////Landing page////////////////////////////*/
+/*////////////////////Landing page////////////////////////////*/
+
+/*////////////////////Animations////////////////////////////*/
+/*////////////////////Animations////////////////////////////*/
+/*////////////////////Animations////////////////////////////*/
+@keyframes magicText{
   0%{
-    top: 43%;
-  right: 110%;
-  transform: translate(50%, -40%);
-    width: 16rem;
-    /* transform: rotate(90deg); */
+    top: 84%;
+    width: 0;
+    height: 5rem;
+  }
+  8.6%{
+    top: 84%;
+    width: 0;
+    height: 5rem;
+  }
+  40%{
+    top: 84%;
+    width: 62rem;
+    height: 5rem;
   }
   60%{
-    top: 43%;
-  right: 50%;
-  transform: translate(50%, -40%);
-    width: 16rem;
-    /* transform: rotate(0deg); */
+    top: 84%;
+    width: 62rem;
+    height: 5rem;
   }
   100%{
-    top: 43%;
-  right: 50%;
-  transform: translate(50%, -40%);
+    top: 33%;
+    height: 50rem;
+  }
+}
+@keyframes Flying{
+  0%{
+    top: 60rem;
+    left: 110%;
+    height: 15rem;
+    width: 13rem;
+    /* transform: rotate(90deg); */
+  }
+  40%{
+    left:5%;
+    top: 60rem;
+    height: 15rem;
+    width: 13rem;
+    /* transform: rotate(0deg); */
+  }
+  60%{
+    left:5%;
+    top: 60rem;
+    height: 15rem;
+    width: 13rem;
+    /* transform: rotate(0deg); */
+  }
+  70%{
+    width: 13rem;
+  }
+  90%{
+    top: 1rem;
+    width: 13rem;
+  }
+  100%{
+  
     width: 31rem;
     /* transform: rotate(0deg); */
   }
 
 }
-@keyframes learning{
-  0%{
-    top: 110%;
-    
-  }
-  50%{
-    top: 55%;
-    
-  }
-  100%{
-    top: 55%;
-    
-  }
-}
-@keyframes expanding{
-  0%{
-    
-    width: 18rem;
-  }
-  50%{
-    
-    width: 18rem;
-  }
-  100%{
-    
-    width: 30rem;
-  }
-}
 @keyframes FlyingLogo{
   0%{
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
   }
   40%{
-    
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
+  }
+  60%{
+    transform: rotate(0deg);
   }
   100%{
     transform: rotate(0deg);
   }
 }
 
-/*////////////////////Landing page////////////////////////////*/
-/*////////////////////Landing page////////////////////////////*/
-/*////////////////////Landing page////////////////////////////*/
+/*////////////////////Animations////////////////////////////*/
+/*////////////////////Animations////////////////////////////*/
+/*////////////////////Animations////////////////////////////*/
 
-/*////////////////////Buttons////////////////////////////*/
-/*////////////////////Buttons////////////////////////////*/
-/*////////////////////Buttons////////////////////////////*/
+/*////////////////////Animations////////////////////////////*/
+/*////////////////////Animations////////////////////////////*/
+/*////////////////////Animations////////////////////////////*/
 
-
-
-/*////////////////////Buttons////////////////////////////*/
-/*////////////////////Buttons////////////////////////////*/
-/*////////////////////Buttons////////////////////////////*/
+/*////////////////////Animations////////////////////////////*/
+/*////////////////////Animations////////////////////////////*/
+/*////////////////////Animations////////////////////////////*/

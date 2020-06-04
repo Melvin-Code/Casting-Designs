@@ -1,10 +1,26 @@
 import React, { Component } from "react";
+import Buttons from "../Buttons";
 
 class LearnMore extends Component {
+  wordRender = (text, classes) => {
+    return <span className={classes}>{text}</span>;
+  };
   render() {
     return (
       <div className="learn-mor-box">
-        <button className="learn-mor-btn">Feels Like Magic</button>
+        <h2 className="intro-text">
+          <span>
+            Hi, my name is Melvin & I am a <br></br> {"{"}
+            {this.wordRender("full-stack: web-developer", "darkBlue")}
+                        {"}"}
+          </span>
+          <br />
+          <span className="sub-text">
+            My mission is to create astoneshing looking websites that meets all
+            your needs
+          </span>
+          <Buttons text='Learn More'/>
+        </h2>
       </div>
     );
   }

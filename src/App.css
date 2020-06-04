@@ -72,6 +72,67 @@
 	}
   }
   #aBk {
-	background-image: linear-gradient(to bottom right, rgb(1, 1, 124), rgb(71, 0, 71));
+	background-image: linear-gradient(to bottom right, rgb(1, 1, 104), rgb(63, 1, 63));
   }
+  .darkBlue{
+	  color: white;
+	  letter-spacing: .28rem;
+  }
+  @import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+body, html {
   
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  width: 179px;
+  height: 59px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  width: 179px;
+  height: 59px;
+  position: relative
+}
+
+.btn {
+  width: 179px;
+  height: 59px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
+  position: absolute;
+}
+
+svg {
+  position: absolute;
+  left: -1.5px;
+  top: -1.5px;
+  fill: none;
+  stroke: #d420d4ed;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: darkblue;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}
