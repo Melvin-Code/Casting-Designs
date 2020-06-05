@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FlyingLogo from './partials/LandingpageCom/FlyingLogo';
+
 import LearnMore from './partials/LandingpageCom/LearnMore';
 
 class LandingPage extends Component {

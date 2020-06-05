@@ -4,9 +4,14 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./components/partials/LandingpageCom/Navbar";
 
 import LandingPage from "./components/LandingPage";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Work from "./components/Work";
 class App extends Component {
   state = {};
-
+  componentDidMount(){
+    document.title = "Casting Desings"
+  }
   handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -22,7 +27,12 @@ class App extends Component {
       <Router>
         <div id='aBk' className="App bg">
           <NavBar/>
-          <LandingPage/>
+          <Switch>
+          <Route exact path="/" render={props => <LandingPage {...props} />} />
+          <Route exact path="/About" render={props => <About {...props} />} />
+          <Route exact path="/Contact" render={props => <Contact {...props} />} />
+          <Route exact path="/Work" render={props => <Work {...props} />} />
+          </Switch>
         </div>
         </Router>
     );
