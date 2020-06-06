@@ -127,6 +127,7 @@ svg {
   background: darkblue;
 }
 
+
 .btn:hover svg {
   stroke-dashoffset: -480;
 }
@@ -134,5 +135,5 @@ svg {
 .btn span {
   color: white;
   font-size: 18px;
-  font-weight: 100;
+  font-weight: bolder;
 }
