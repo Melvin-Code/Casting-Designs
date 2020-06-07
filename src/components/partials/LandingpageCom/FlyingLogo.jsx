@@ -11,7 +11,7 @@ class FlyingLogo extends Component {
           src="/Casting -logo (1)/vector/isolated-monochrome-white.svg"
         />
         </Link>
-        <Link>
+        <Link to='/'>
         <h1 className="co-name">
           <span className="co-name-up">Casting</span>
           <span className="co-name-dwn">Designs</span>
