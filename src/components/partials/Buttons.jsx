@@ -30,7 +30,7 @@ class Buttons extends Component {
     
         return (
           <div className={`container`} style={animatio3} >
-          {console.log(this.props)}
+          {/* {console.log(this.props)} */}
             <div className="center" style={animatio1}>
               <button  className="btn" style= {backing}>
                 <svg

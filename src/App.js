@@ -12,6 +12,15 @@ class App extends Component {
   componentDidMount(){
     document.title = "Casting Desings"
   }
+  rendering=()=>{
+    console.log('yes')
+     this.setState({
+        path: window.location.pathname
+
+    })
+
+
+}
   handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -26,7 +35,7 @@ class App extends Component {
     return (
       <Router>
         <div id='aBk' className="App bg">
-          <NavBar/>
+          <NavBar rendering= {this.rendering} path={this.state.path}/>
           <Switch>
           <Route exact path="/" render={props => <LandingPage {...props} />} />
           <Route exact path="/About" render={props => <About {...props} />} />
