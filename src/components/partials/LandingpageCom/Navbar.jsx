@@ -4,29 +4,18 @@ import FlyingLogo from "./FlyingLogo";
 import Buttons from "../Buttons";
 
 class NavBar extends Component {
-    state={
-        bordering: false,
-        
-    }
-    rendering=()=>{
-        console.log('yes')
-         this.setState({
-            path: window.location.pathname
-
-        })
     
-
-    }
+    
+      
     render() {
-        
     return (
-        <nav className="navbar">
+        <nav  onClick={()=>this.props.rendering()} className="navbar">
         
         <FlyingLogo />
         <div className="navbar-box">
-          <Link onClick={()=>this.rendering()}  id="nav-link" className="link" to="/About">
-        {console.log(this.state.path)}
-            <Buttons onClick={()=>this.rendering()} 
+        <div id="nav-link"   >
+          <Link  className="link" to="/About">
+            <Buttons  
               text={<p>About</p>}
               background="transparent"
               font="2.8rem"
@@ -37,11 +26,13 @@ class NavBar extends Component {
               width2= '130px'
               width3= '130px'
               newBorder = '1px solid #91C9FF'
-              choice = {this.state.path === '/About'? true: false}
+              choice = {this.props.path === '/About'? true: false}
             />
             
           </Link>
-          <Link id="nav-link" className="link" to="/Contact">
+          </div>
+          <div id="nav-link"  >
+          <Link  className="link" to="/Contact">
           <Buttons onClick={this.rendering}
               text={<p>Contact</p>}
               background="transparent"
@@ -53,9 +44,13 @@ class NavBar extends Component {
               width2= '150px'
               width3= '150px'
               newBorder = '1px solid #91C9FF'
+              choice = {this.props.path === '/Contact'? true: false}
             />
           </Link>
-          <Link id="nav-link" className="link" to="/Work">
+          </div>
+        
+        <div id="nav-link"  >
+          <Link  className="link" to="/Work">
           <Buttons
               text={<p>Work</p>}
               background="transparent"
@@ -67,8 +62,10 @@ class NavBar extends Component {
               width2= '130px'
               width3= '130px'
               newBorder = '1px solid #91C9FF'
+              choice = {this.props.path === '/Work'? true: false}
             />
           </Link>
+          </div>
         </div>
       </nav>
     );

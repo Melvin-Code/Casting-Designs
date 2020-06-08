@@ -8,12 +8,17 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Work from "./components/Work";
 class App extends Component {
-  state = {};
+  state = {
+    path: window.location.pathname
+  };
   componentDidMount(){
     document.title = "Casting Desings"
   }
-  rendering=()=>{
-    console.log('yes')
+ 
+   
+
+rendering=()=>{
+   
      this.setState({
         path: window.location.pathname
 
@@ -37,7 +42,7 @@ class App extends Component {
         <div id='aBk' className="App bg">
           <NavBar rendering= {this.rendering} path={this.state.path}/>
           <Switch>
-          <Route exact path="/" render={props => <LandingPage {...props} />} />
+          <Route exact path="/" render={props => <LandingPage rendering={this.rendering} {...props} />} />
           <Route exact path="/About" render={props => <About {...props} />} />
           <Route exact path="/Contact" render={props => <Contact {...props} />} />
           <Route exact path="/Work" render={props => <Work {...props} />} />

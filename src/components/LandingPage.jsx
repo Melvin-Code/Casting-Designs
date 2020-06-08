@@ -7,7 +7,7 @@ class LandingPage extends Component {
         return (
             <div className='lan-page'>
                
-               <LearnMore/>
+               <LearnMore rendering={this.props.rendering} />
             </div>
         );
     }
