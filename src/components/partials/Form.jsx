@@ -6,8 +6,10 @@ export default class Form extends React.Component {
     this.submitForm = this.submitForm.bind(this);
     this.state = {
       status: "",
-      next:false,
-      thereIsText: false
+      next: 0,
+      in1: '',
+      in2: '',
+      in3: '',
     };
   }
   handleChange = (e) => {
@@ -15,7 +17,25 @@ export default class Form extends React.Component {
       [e.target.name]: e.target.value,
     });
   };
-  
+  nextCounter=()=>{
+      this.setState({
+          next: this.state.next + 1
+      })
+  }
+  displayInput=()=>{
+    if(this.state.next === 0){
+        return 'display-1'
+    }else if (this.state.next=== 1 && this.state.name !== ""){
+        return '-2'
+    }else if(this.state.next===2 && this.state.name !== '' && this.state.email !==3){
+        
+        return 'play-3'
+    }else if(this.state.next > 2){
+        this.setState({
+            next: 2
+        })
+    }
+  }
   render() {
     const { status } = this.state;
     return (
@@ -25,7 +45,7 @@ export default class Form extends React.Component {
         method="POST"
         className="form-box"
       > 
-        <input
+        <input id={this.displayInput()} 
           onChange={this.handleChange}
           className="form-in"
           type="text"
@@ -33,7 +53,7 @@ export default class Form extends React.Component {
           placeholder="Name"
         />
 
-        <input
+        <input id={`display${this.displayInput()}`}
           onChange={this.handleChange}
           className="form-in"
           type="email"
@@ -41,7 +61,7 @@ export default class Form extends React.Component {
           placeholder="Email"
         />
 
-        <input
+        <input id={`dis${this.displayInput()}`}
           onChange={this.handleChange}
           className="form-in"
           type="text"
@@ -49,13 +69,14 @@ export default class Form extends React.Component {
           placeholder="Message"
         />
         {console.log(this.state)}
-        <button>Next</button>
+        {console.log(this.state.next)}
         {status === "SUCCESS" ? (
           <p>Thanks!</p>
         ) : (
           <button className="button">Submit</button>
         )}
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
+        <button type='button' onClick={this.nextCounter} >Next</button>
       </form>
     );
   }

@@ -260,6 +260,14 @@ button {
   font-size: 3rem;
   font-weight: bolder;
 }
+.contact-box .form-box .form-in{
+  display: none;
+}
+#display-1, 
+#display-2,
+#display-3{
+  display: block;
+}
 .contact-box .social-box .social-main{
   font-size: 3.5rem;
   font-weight: bolder;
