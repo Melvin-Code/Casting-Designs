@@ -38,9 +38,9 @@ class Buttons extends Component {
         <div className="center" style={animatio1}>
           <button className="btn" style={backing}>
             <svg
-              width={`${this.props.polyWidth + 1}px`}
+              width={`${Number(this.props.polyWidth) + 1}px`}
               height="60px"
-              viewBox={`0 0 ${this.props.polyWidth + 1} 60`}
+              viewBox={`0 0 ${Number(this.props.polyWidth) + 1} 60`}
               className="border"
             >
               <polyline

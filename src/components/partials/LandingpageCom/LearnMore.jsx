@@ -3,20 +3,16 @@ import Buttons from "../Buttons";
 import { Link } from "react-router-dom";
 
 class LearnMore extends Component {
-  wordRender = (text, classes) => {
-    return <span className={classes}>{text}</span>;
-  };
+  
   
   render() {
-    // this.componentDidMount=()=>{
-    //   return()
-    // }
+    
     return (
       <div className="learn-mor-box">
         <h2 className="intro-text">
           <span>
             Hi, my name is Melvin & I am a <br></br> {"{"}
-            {this.wordRender("full-stack: web-developer", "darkBlue")}
+            <span></span>full-stack: web-developer
             {"}"}
           </span>
           <br />
@@ -26,7 +22,7 @@ class LearnMore extends Component {
           </span>
           <div onClick={()=>this.props.rendering()}>
           <Link to='/About' >
-          <Buttons text="Learn More" background="darkblue" polyWidth="179" />
+          <Buttons text="Learn More" background="#3d014061" polyWidth="179" />
           </Link>
           </div>
         </h2>
