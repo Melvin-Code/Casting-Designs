@@ -7,9 +7,6 @@ export default class Form extends React.Component {
     this.state = {
       status: "",
       next: 0,
-      in1: "",
-      in2: "",
-      in3: "",
     };
   }
   handleChange = (e) => {
@@ -29,27 +26,40 @@ export default class Form extends React.Component {
     });
   };
   displayPreWords = () => {
+    let stInput = null
+    let firstInput=()=>{
+      return stInput = true
+    }
     return (
-      <div className="pre-words">
-        {this.state.writtenName !== "" && this.state.next >= 1 ? (
+      <div>
+        {stInput === true ? (
           <span className="pw-wording">
             <i className="fas fa-user-circle fa-2x"></i>{" "}
             {this.state.writtenName}
-          </span>
-        ) : null}
-        {this.state.writtenEmail !== "" && this.state.next >= 2? (
-          <span className="pw-wording">
-            <i className="fas fa-envelope fa-2x"></i> {this.state.writtenEmail}
-          </span>
-        ) : null}
-        {this.state.message === String && this.state.next >= 2 ? (
-          <span className="pw-wording">
-            <i className="fas fa-pen-square fa-2x"></i>{" "}
-            {this.state.writtenMessage}
-          </span>
-        ) : null}
+          </span>): null}
       </div>
     );
+    // return (
+    //   <div className="pre-words">
+    //     {this.state.name === true && this.state.next >= 1 ? (
+    //       <span className="pw-wording">
+    //         <i className="fas fa-user-circle fa-2x"></i>{" "}
+    //         {this.state.writtenName}
+    //       </span>
+    //     ) : null}
+    //     {this.state.writtenEmail !== "" && this.state.next >= 2? (
+    //       <span className="pw-wording">
+    //         <i className="fas fa-envelope fa-2x"></i> {this.state.writtenEmail}
+    //       </span>
+    //     ) : null}
+    //     {this.state.message === String && this.state.next >= 2 ? (
+    //       <span className="pw-wording">
+    //         <i className="fas fa-pen-square fa-2x"></i>{" "}
+    //         {this.state.writtenMessage}
+    //       </span>
+    //     ) : null}
+    //   </div>
+    // );
   };
   displayInput = () => {
     if (this.state.next === 0) {
@@ -63,7 +73,6 @@ export default class Form extends React.Component {
     ) {
       return "play-3";
     } else if (this.state.next > 2) {
-      
       return "play-3";
     }
   };
@@ -76,10 +85,11 @@ export default class Form extends React.Component {
         method="POST"
         className="form-box"
       >
-      
-      {this.displayPreWords()}
+        {console.log(this.state.name)}
+        {this.displayPreWords()}
         <div id={this.displayInput()} className="input-box">
           <input
+            // onInput={}
             onChange={this.handleChange}
             className="form-in"
             type="text"
