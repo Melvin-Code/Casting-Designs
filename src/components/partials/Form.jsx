@@ -7,6 +7,7 @@ export default class Form extends React.Component {
     this.state = {
       status: "",
       next: 0,
+      nInput: false
     };
   }
   handleChange = (e) => {
@@ -25,18 +26,22 @@ export default class Form extends React.Component {
           : null,
     });
   };
+  onInputting =(input, choice)=>{
+  
+    this.setState({
+      [input]: choice
+    })
+    
+  }
   displayPreWords = () => {
-    let stInput = null
-    let firstInput=()=>{
-      return stInput = true
-    }
+    
     return (
       <div>
-        {stInput === true ? (
+        {this.nInput === true ? (
           <span className="pw-wording">
             <i className="fas fa-user-circle fa-2x"></i>{" "}
             {this.state.writtenName}
-          </span>): null}
+          </span>): console.log()}
       </div>
     );
     // return (
@@ -89,7 +94,7 @@ export default class Form extends React.Component {
         {this.displayPreWords()}
         <div id={this.displayInput()} className="input-box">
           <input
-            // onInput={}
+            onInput={()=> this.onInputting( 'stInput', true)}
             onChange={this.handleChange}
             className="form-in"
             type="text"
