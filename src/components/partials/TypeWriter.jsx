@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
+
+import Typewriter from 'typewriter-effect';
 class TypeWriter extends Component {
-  typing=()=>{
-    $(function () {
-    //     $(".text").typed({
-    //       strings:["Vladimir Vaize"],
-    //       typeSpeed: 70,
-    //       backSpeed: 20,
-    //       backDelay: 1500,
-    //       showCursor: false,
-    //       loop: false
-    //     });
-    //   });
-    // }
+  
     render() {
-        this.typing()
+        
         return (
-            <div className='text'>
-                
+            <div>
+               <Typewriter
+               delay= {100}
+  onInit={(typewriter) => {
+    typewriter.typeString('Hello World!')
+      .callFunction(() => {
+        console.log('String typed out!');
+      })
+     
+      .pauseFor(10)
+      .callFunction(() => {
+        console.log('All strings were deleted');
+      })
+      .start();
+  }}
+/> 
             </div>
         );
     }
@@ -25,35 +29,3 @@ class TypeWriter extends Component {
 
 export default TypeWriter;
 
-// import React, { Component } from 'react';
-
-
-
-
-// class TypeWriter extends Component {
-//   state={
-//     test: document.getElementById("typer"),
-//     text: "Hello World", //put your text here
-//     result: "",
-//   }
-
-// //Press rerun button to see effect
-
-// render() {
-//     window.addEventListener("load", (event) => {
-//       for (let i = 0; i < text.length; i++) {
-//         setTimeout(function () {
-//           result += text[i];
-//           test.innerHTML = result;
-//         }, 120 * i);
-//       }
-//     });
-//         return (
-//             <div id='typer'>
-//                 looooooooooping
-//             </div>
-//         );
-//     }
-// }
-
-// export default TypeWriter;
