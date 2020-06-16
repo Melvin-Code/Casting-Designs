@@ -1,4 +1,5 @@
 import React from "react";
+import TypeWriter from "./TypeWriter";
 
 export default class Form extends React.Component {
   constructor(props) {
@@ -7,7 +8,9 @@ export default class Form extends React.Component {
     this.state = {
       status: "",
       next: 0,
-      nInput: false
+      email: "",
+      writtenName: "Fill with your name",
+      writtenMessage: "Now write your message",
     };
   }
   handleChange = (e) => {
@@ -19,52 +22,45 @@ export default class Form extends React.Component {
     this.setState({
       next: this.state.next + 1,
       writtenName: this.state.name !== "" ? this.state.name : null,
-      writtenEmail: this.state.email !== "" ? this.state.email : null,
-      writtenMessage:
-        this.state.email !== "" && this.state.next >= 2
-          ? "Now write your message"
-          : null,
+      writtenEmail: this.state.email !== "" ? this.state.email : "Fill with your email",
+      writtenMessage: "Now write your message"
+          
     });
   };
-  onInputting =(input, choice)=>{
-  
+  onInputting = (input, choice) => {
     this.setState({
-      [input]: choice
-    })
-    
-  }
+      [input]: choice,
+    });
+  };
   displayPreWords = () => {
-    
     return (
-      <div>
-        {this.nInput === true ? (
-          <span className="pw-wording">
-            <i className="fas fa-user-circle fa-2x"></i>{" "}
-            {this.state.writtenName}
-          </span>): console.log()}
+      <div className='prWords-box'>
+        <div className="preWords-container">
+          {this.state.stInput === true ? (
+            <span className="pw-wording">
+              <i className="fas fa-user-circle fa-2x"></i>
+              <p>{this.state.writtenName}</p>
+            </span>
+          ) : null}
+        </div>
+        <div className="preWords-container">
+          {this.state.ndInput === true ? (
+            <span className="pw-wording">
+              <i className="fas fa-envelope fa-2x"></i>
+              <p>{this.state.writtenEmail}</p>
+            </span>
+          ) : null}
+        </div>
+        <div className="preWords-container">
+          {this.state.rdInput === true ? (
+            <span className="pw-wording">
+              <i className="fas fa-pen-square fa-2x"></i>
+              <p>{this.state.writtenMessage}</p>
+            </span>
+          ) : null}
+        </div>
       </div>
     );
-    // return (
-    //   <div className="pre-words">
-    //     {this.state.name === true && this.state.next >= 1 ? (
-    //       <span className="pw-wording">
-    //         <i className="fas fa-user-circle fa-2x"></i>{" "}
-    //         {this.state.writtenName}
-    //       </span>
-    //     ) : null}
-    //     {this.state.writtenEmail !== "" && this.state.next >= 2? (
-    //       <span className="pw-wording">
-    //         <i className="fas fa-envelope fa-2x"></i> {this.state.writtenEmail}
-    //       </span>
-    //     ) : null}
-    //     {this.state.message === String && this.state.next >= 2 ? (
-    //       <span className="pw-wording">
-    //         <i className="fas fa-pen-square fa-2x"></i>{" "}
-    //         {this.state.writtenMessage}
-    //       </span>
-    //     ) : null}
-    //   </div>
-    // );
   };
   displayInput = () => {
     if (this.state.next === 0) {
@@ -90,11 +86,11 @@ export default class Form extends React.Component {
         method="POST"
         className="form-box"
       >
-        {console.log(this.state.name)}
-        {this.displayPreWords()}
+      <TypeWriter/>
+        <div className="prWords-holder" >{this.displayPreWords()}</div>
         <div id={this.displayInput()} className="input-box">
           <input
-            onInput={()=> this.onInputting( 'stInput', true)}
+            onInput={() => this.onInputting("stInput", true)}
             onChange={this.handleChange}
             className="form-in"
             type="text"
@@ -107,6 +103,7 @@ export default class Form extends React.Component {
         </div>
         <div id={`display${this.displayInput()}`} className="input-box">
           <input
+            onInput={() => this.onInputting("ndInput", true)}
             onChange={this.handleChange}
             className="form-in"
             type="email"
@@ -119,19 +116,18 @@ export default class Form extends React.Component {
         </div>
         <div id={`dis${this.displayInput()}`} className="input-box">
           <input
+            onInput={() => this.onInputting("rdInput", true)}
             onChange={this.handleChange}
             className="form-in"
             type="text"
             name="message"
             placeholder="Message"
-            onInput={this.displayPreWords}
           />
           <span id="input-icon">
             <i className="fas fa-pen-square fa-2x"></i>
           </span>
         </div>
-        {console.log(this.state)}
-        {/* {console.log(this.state.next)} */}
+
         {status === "SUCCESS" ? (
           <p>Thanks!</p>
         ) : (
