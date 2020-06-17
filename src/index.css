@@ -258,6 +258,7 @@ button {
   transform: translate(-50%, -50%);
   background-color: var(--main-bk-color);
   padding: 2rem;
+  width: 72rem;
 }
 .contact-box .form-text-box {
 }
@@ -267,32 +268,38 @@ button {
 .contact-box .form-text-box .form-text-sub {
   font-size: 3rem;
   font-weight: bolder;
+  margin: 1rem 0 7rem 0;
+}
+.contact-box .form-box {
+  position: relative;
 }
 .contact-box .form-box .input-box {
   position: relative;
   display: none;
+  margin: 6rem 0 0;
 }
-.contact-box .form-box .form-in {
-  padding-left: 2.5rem;
+.contact-box .form-box .input-box .form-in {
+  padding-left: 2.7rem;
   color: white;
   border: none;
   font-size: 2rem;
   border-bottom: 2px dashed white;
   background-color: transparent;
   height: 2.5rem;
-  margin: 3rem 0 0;
+ 
 }
 #input-icon {
   position: absolute;
-  bottom: 5%;
-  left: 0.1rem;
-  /* transform: translateY(-10%); */
+  bottom: 15%;
+    left: .3rem;
+  
 }
 .contact-box .form-box .prWords-holder {
-  margin-top: 3rem;
-  
-  display: flex;
-  flex-direction: row;
+  /* margin-top: 3rem; */
+  position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: -5rem;
 }
 .contact-box .form-box .prWords-holder .prWords-box {
   display: flex;

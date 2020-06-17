@@ -4,7 +4,6 @@ import Typewriter from 'typewriter-effect';
 class TypeWriter extends Component {
   
     render() {
-        
         return (
             <div>
                <Typewriter

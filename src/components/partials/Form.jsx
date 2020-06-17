@@ -86,7 +86,7 @@ export default class Form extends React.Component {
         method="POST"
         className="form-box"
       >
-      <TypeWriter/>
+      {/* <TypeWriter/> */}
         <div className="prWords-holder" >{this.displayPreWords()}</div>
         <div id={this.displayInput()} className="input-box">
           <input
