@@ -137,3 +137,42 @@ svg {
   font-size: 18px;
   font-weight: bolder;
 }
+.linkedIn{
+	background-color:#0077b7;
+	display: inline-block;
+	border-radius: .4rem;
+	margin: .4rem;
+}
+#linkedIn{
+	padding: .5rem .6rem ;
+}
+
+.git{
+	background-color:#fff;
+	display: inline-block;
+	border-radius: .6rem;
+	color: black;
+	margin: .4rem;
+}
+#git{
+	padding: .5rem .6rem ;
+}
+
+.linkedIn:hover{
+	font-size: 1.9rem;
+	box-shadow: 0 0 0px 4px #0077b7;
+	margin: .45rem;
+	background-color: white;
+	color: #0077b7;
+
+}
+.git:hover{
+	font-size: 1.9rem;
+	box-shadow: 0 0 0px 4px white;
+	margin: .4rem;
+	background-color: black;
+	color: white;
+}
+.page-boxes{
+	box-shadow: 1px 1px 6px 0px #000000;
+}

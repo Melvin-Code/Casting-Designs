@@ -142,6 +142,7 @@ button {
   height: 32rem;
   overflow: hidden;
   padding: 2rem;
+  box-shadow: 1px 1px 6px 0px #000000;
   /* transition: 2s; */
 }
 /* .lan-page .learn-mor-box:hover{
@@ -173,6 +174,7 @@ button {
     top: 84%;
     width: 0;
     height: 5rem;
+    box-shadow: none;
   }
   8.6% {
     top: 84%;
@@ -183,11 +185,13 @@ button {
     top: 84%;
     width: 62rem;
     height: 5rem;
+    box-shadow: none;
   }
   60% {
     top: 84%;
     width: 62rem;
     height: 5rem;
+    box-shadow: none;
   }
   100% {
     top: 33%;
@@ -258,27 +262,31 @@ button {
   transform: translate(-50%, -50%);
   background-color: var(--main-bk-color);
   padding: 2rem;
-  width: 72rem;
+  width: 80rem;
 }
-.contact-box .form-text-box {
+.contact-box .setter{
+  position: relative;
 }
-.contact-box .form-text-box .form-text-main {
+.contact-box .setter .form-text-box {
+  position: relative;
+}
+.contact-box .setter .form-text-box .form-text-main {
   font-size: 5rem;
 }
-.contact-box .form-text-box .form-text-sub {
+.contact-box .setter .form-text-box .form-text-sub {
   font-size: 3rem;
   font-weight: bolder;
   margin: 1rem 0 7rem 0;
 }
-.contact-box .form-box {
+.contact-box .setter .form-box {
   position: relative;
 }
-.contact-box .form-box .input-box {
+.contact-box .setter .form-box .input-box {
   position: relative;
   display: none;
-  margin: 6rem 0 0;
+  margin: 6rem 0 2rem;
 }
-.contact-box .form-box .input-box .form-in {
+.contact-box .setter .form-box .input-box .form-in {
   padding-left: 2.7rem;
   color: white;
   border: none;
@@ -294,59 +302,138 @@ button {
     left: .3rem;
   
 }
-.contact-box .form-box .prWords-holder {
+.contact-box .setter .form-box .prWords-holder {
   /* margin-top: 3rem; */
   position: absolute;
     display: flex;
     flex-direction: row;
     top: -5rem;
 }
-.contact-box .form-box .prWords-holder .prWords-box {
+.contact-box .setter .form-box .prWords-holder .prWords-box {
   display: flex;
   flex-direction: row;
+  
 }
-.contact-box .form-box .prWords-holder .prWords-box .preWords-container {
+.contact-box .setter .form-box .prWords-holder .prWords-box .preWords-container {
   background-color: rgba(255, 255, 255, 0.301);
   margin-right: 1rem;
   border-radius: 1rem;
   
 }
-.contact-box
+@keyframes contactIcon{
+  0%{
+    width: 0;
+    height: 2.4rem;
+    /* position: absolute;
+    right: 0; */
+    /* border-radius: 50%; */
+  }
+  50%{
+    width: 2rem;
+    height: 2.4rem;
+    /* position: absolute;
+    right: 0; */
+    /* border-radius: 50%; */
+  }
+  100%{
+    width: 18rem;
+    height: 2.4rem;
+  }
+
+}
+@keyframes contactIcon3{
+  0%{
+    width: 0;
+    height: 2.4rem;
+    /* position: absolute;
+    right: 0; */
+    /* border-radius: 50%; */
+  }
+  50%{
+    width: 2rem;
+    height: 2.4rem;
+    /* position: absolute;
+    right: 0; */
+    /* border-radius: 50%; */
+  }
+  100%{
+    width: 22rem;
+    height: 2.4rem;
+  }
+
+}
+.contact-box .setter
   .form-box
   .prWords-holder
   .prWords-box
   .preWords-container
   .pw-wording {
-  display: block;
+  display: inline-block;
   display: flex;
   align-items: center;
   padding: 2.5px 7px;
-  width: auto;
-  height: auto;
+  overflow: hidden;
+  cursor: pointer;
+  animation-name: contactIcon;
+  animation-duration: 2s;
+  
 }
-.contact-box
+.contact-box .setter
+  .form-box
+  .prWords-holder
+  .prWords-box
+  .preWords-container
+  #pw-wording3 {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  padding: 2.5px 7px;
+  overflow: hidden;
+  
+  animation-name: contactIcon3;
+  animation-duration: 2s;
+  
+}
+.contact-box .setter
   .form-box
   .prWords-holder
   .prWords-box
   .preWords-container
   .pw-wording
-  > p {
+  > p{
   font-size: 2rem;
   font-weight: bolder;
   margin-left: .5rem;
+  overflow: hidden;
+  /* width: 18rem; */
+  height: 2.4rem;
+  /* animation-name: contactIcon;
+  animation-duration: 2s;
+  overflow: hidden; */
 }
+.contact-box .setter
+  .form-box
+  .prWords-holder
+  .prWords-box
+  .preWords-container
+  .pw-wording
+  > i{
+    height: 2rem;
+  }
 #display-1,
 #display-2,
 #display-3 {
   display: block;
 }
-.contact-box .social-box .social-main {
+.contact-box .setter .social-box .social-main {
   font-size: 3.5rem;
   font-weight: bolder;
+  margin-top: 1rem;
 }
-.contact-box .social-box .social-sub {
+.contact-box .setter .social-box .social-sub {
   font-size: 2rem;
   font-weight: bolder;
+  margin: 1rem 0;
 }
 
 /*////////////////////Contact Page////////////////////////////*/

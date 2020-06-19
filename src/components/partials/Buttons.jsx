@@ -15,6 +15,7 @@ class Buttons extends Component {
     let backing = {
       border: this.toggler(),
       width: this.props.width2,
+      height: this.props.height2,
       backgroundColor: "transparent",
       ":hover": {
         backgroundColor: this.props.background,
@@ -27,28 +28,30 @@ class Buttons extends Component {
     };
     let animatio1 = {
       width: this.props.width1,
+      height: this.props.height1
     };
     let animatio3 = {
       width: this.props.width3,
+      height: this.props.height3
     };
 
     return (
       <div className={`container`} style={animatio3}>
         {/* {console.log(this.props)} */}
         <div className="center" style={animatio1}>
-          <button className="btn" style={backing}>
+          <button type={this.props.type} onClick={this.props.onClicker} className="btn" style={backing}>
             <svg
               width={`${Number(this.props.polyWidth) + 1}px`}
-              height="60px"
-              viewBox={`0 0 ${Number(this.props.polyWidth) + 1} 60`}
+              height={`${Number(this.props.polyheight) + 1}px`}
+              viewBox={`0 0 ${Number(this.props.polyWidth) + 1} ${Number(this.props.polyheight) + 1}`}
               className="border"
             >
               <polyline
-                points={`${this.props.polyWidth},1 ${this.props.polyWidth},59 1,59 1,1 ${this.props.polyWidth},1`}
+                points={`${this.props.polyWidth},1 ${this.props.polyWidth},${this.props.polyheight} 1,${this.props.polyheight} 1,1 ${this.props.polyWidth},1`}
                 className="bg-line"
               />
               <polyline
-                points={`${this.props.polyWidth},1 ${this.props.polyWidth},59 1,59 1,1 ${this.props.polyWidth},1`}
+                points={`${this.props.polyWidth},1 ${this.props.polyWidth},${this.props.polyheight} 1,${this.props.polyheight} 1,1 ${this.props.polyWidth},1`}
                 className="hl-line"
               />
             </svg>

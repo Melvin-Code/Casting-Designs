@@ -1,5 +1,6 @@
 import React from "react";
 import TypeWriter from "./TypeWriter";
+import Buttons from "./Buttons";
 
 export default class Form extends React.Component {
   constructor(props) {
@@ -22,9 +23,9 @@ export default class Form extends React.Component {
     this.setState({
       next: this.state.next + 1,
       writtenName: this.state.name !== "" ? this.state.name : null,
-      writtenEmail: this.state.email !== "" ? this.state.email : "Fill with your email",
-      writtenMessage: "Now write your message"
-          
+      writtenEmail:
+        this.state.email !== "" ? this.state.email : "Fill with your email",
+      writtenMessage: "Now write your message",
     });
   };
   onInputting = (input, choice) => {
@@ -32,20 +33,25 @@ export default class Form extends React.Component {
       [input]: choice,
     });
   };
+  ressetinNext=(num)=>{
+    this.setState({
+      next: num
+    })
+  }
   displayPreWords = () => {
     return (
-      <div className='prWords-box'>
+      <div className="prWords-box">
         <div className="preWords-container">
           {this.state.stInput === true ? (
-            <span className="pw-wording">
+            <div onClick={()=>this.ressetinNext(0)} className="pw-wording">
               <i className="fas fa-user-circle fa-2x"></i>
-              <p>{this.state.writtenName}</p>
-            </span>
+              <p >{this.state.writtenName}</p>
+            </div>
           ) : null}
         </div>
         <div className="preWords-container">
           {this.state.ndInput === true ? (
-            <span className="pw-wording">
+            <span onClick={()=>this.ressetinNext(1)} className="pw-wording">
               <i className="fas fa-envelope fa-2x"></i>
               <p>{this.state.writtenEmail}</p>
             </span>
@@ -53,7 +59,7 @@ export default class Form extends React.Component {
         </div>
         <div className="preWords-container">
           {this.state.rdInput === true ? (
-            <span className="pw-wording">
+            <span id="pw-wording3" onClick={()=>this.ressetinNext(2)} className="pw-wording">
               <i className="fas fa-pen-square fa-2x"></i>
               <p>{this.state.writtenMessage}</p>
             </span>
@@ -86,8 +92,8 @@ export default class Form extends React.Component {
         method="POST"
         className="form-box"
       >
-      {/* <TypeWriter/> */}
-        <div className="prWords-holder" >{this.displayPreWords()}</div>
+        {/* <TypeWriter/> */}
+        <div className="prWords-holder"><div className='setter'>{this.displayPreWords()}</div></div>
         <div id={this.displayInput()} className="input-box">
           <input
             onInput={() => this.onInputting("stInput", true)}
@@ -129,14 +135,30 @@ export default class Form extends React.Component {
         </div>
 
         {status === "SUCCESS" ? (
-          <p>Thanks!</p>
+          <p>Thanks for reaching out</p>
         ) : (
-          <button className="button">Submit</button>
+          <Buttons 
+            type={this.state.next < 3? 'button': 'submit'}
+            text={this.state.next < 2? 'Next': 'Submit'}
+            font="2.8rem"
+            weight="bolder"
+            polyWidth="130"
+            polyheight='50' 
+            width1="130px"
+            width2="130px"
+            width3="130px"
+            height1="50px"
+            height2="50px"
+            height3="50px"
+            newBorder="1px solid #91C9FF"
+            onClicker = {this.state.next < 3 ? this.nextCounter: null}
+          />
         )}
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
-        <button type="button" onClick={this.nextCounter}>
+        {/* <button type="button" onClick={this.nextCounter}>
           Next
-        </button>
+        </button> */}
+        {console.log(this.state.next)}
       </form>
     );
   }

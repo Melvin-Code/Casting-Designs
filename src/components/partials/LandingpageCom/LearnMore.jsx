@@ -22,7 +22,7 @@ class LearnMore extends Component {
           </span>
           <div onClick={()=>this.props.rendering()}>
           <Link to='/About' >
-          <Buttons text="Learn More" background="#3d014061" polyWidth="179" />
+          <Buttons text="Learn More" background="#3d014061" polyWidth="179" polyheight='59' />
           </Link>
           </div>
         </h2>

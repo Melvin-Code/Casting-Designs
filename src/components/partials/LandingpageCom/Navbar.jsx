@@ -22,6 +22,7 @@ class NavBar extends Component {
               weight="bolder"
               border="none"
               polyWidth= '130'
+              polyheight= '59'
               width1= '130px'
               width2= '130px'
               width3= '130px'
@@ -40,6 +41,7 @@ class NavBar extends Component {
               weight="bolder"
               border="none"
               polyWidth= '150'
+              polyheight= '59'
               width1= '150px'
               width2= '150px'
               width3= '150px'
@@ -58,6 +60,7 @@ class NavBar extends Component {
               weight="bolder"
               border="none"
               polyWidth= '130'
+              polyheight= '59'
               width1= '130px'
               width2= '130px'
               width3= '130px'
