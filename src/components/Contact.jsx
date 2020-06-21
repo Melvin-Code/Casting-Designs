@@ -24,9 +24,9 @@ class Contact extends Component {
               <i id="linkedIn" class="fab fa-linkedin-in"></i>
             </a>{" "}
             or check my code at{" "}
-            <Link className="git">
+            <a href='https://github.com/Melvin-Code' className="git">
               <i id="git" class="fab fa-github"></i>
-            </Link>
+            </a>
           </p>
         </div>
         </div>

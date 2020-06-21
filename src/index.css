@@ -328,15 +328,15 @@ button {
     right: 0; */
     /* border-radius: 50%; */
   }
-  50%{
+  /* 50%{
     width: 2rem;
-    height: 2.4rem;
+    height: 2.4rem; */
     /* position: absolute;
     right: 0; */
     /* border-radius: 50%; */
-  }
+  /* } */
   100%{
-    width: 18rem;
+    width: 19rem;
     height: 2.4rem;
   }
 
@@ -349,15 +349,15 @@ button {
     right: 0; */
     /* border-radius: 50%; */
   }
-  50%{
-    width: 2rem;
-    height: 2.4rem;
+  /* 50%{ */
+    /* width: 2rem;
+    height: 2.4rem; */
     /* position: absolute;
     right: 0; */
     /* border-radius: 50%; */
-  }
+  /* } */
   100%{
-    width: 22rem;
+    width: 25rem;
     height: 2.4rem;
   }
 
@@ -375,7 +375,7 @@ button {
   overflow: hidden;
   cursor: pointer;
   animation-name: contactIcon;
-  animation-duration: 2s;
+  animation-duration: .5s;
   
 }
 .contact-box .setter
