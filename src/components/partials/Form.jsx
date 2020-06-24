@@ -45,7 +45,7 @@ export default class Form extends React.Component {
           {this.state.stInput === true ? (
             <div onClick={()=>this.ressetinNext(0)} className="pw-wording">
               <i className="fas fa-user-circle fa-2x"></i>
-              <p ></p>
+              <p >{this.state.writtenName}</p>
             </div>
           ) : null}
         </div>
