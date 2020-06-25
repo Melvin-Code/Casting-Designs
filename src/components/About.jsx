@@ -42,43 +42,43 @@ class About extends Component {
           </div>
           <div>
               <div>
-                  <i class="fab fa-html5"></i>
+                  <div><i class="fab fa-html5"></i></div>
                   <p>HTML5</p>
               </div>
               <div>
-              <i class="fab fa-css3-alt"></i>
+              <div><i class="fab fa-css3-alt"></i></div>
                   <p></p>
               </div>
               <div>
-              <i class="fab fa-js"></i>
+              <div><i class="fab fa-js"></i></div>
                   <p></p>
               </div>
               <div>
-              <i class="fab fa-sass"></i>
+              <div><i class="fab fa-sass"></i></div>
                   <p></p>
               </div>
               <div>
-              <i class="fab fa-react"></i>
+              <div><i class="fab fa-react"></i></div>
                   <p></p>
               </div>
               <div>
-              
+                
                   <p></p>
               </div>
               <div>
-                  <i></i>
+              <div><i></i></div>
                   <p></p>
               </div>
               <div>
-                  <i></i>
+              <div><i></i></div>
                   <p></p>
               </div>
               <div>
-                  <i></i>
+              <div><i></i></div>
                   <p></p>
               </div>
               <div>
-                  <i></i>
+              <div><i></i></div>
                   <p></p>
               </div>
           </div>
