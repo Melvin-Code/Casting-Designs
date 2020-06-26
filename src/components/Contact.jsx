@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Form from "./partials/Form";
-import { Link } from "react-router-dom";
+
 
 class Contact extends Component {
   render() {
