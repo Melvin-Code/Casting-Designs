@@ -1,5 +1,5 @@
 import React from "react";
-import TypeWriter from "./TypeWriter";
+
 import Buttons from "./Buttons";
 
 export default class Form extends React.Component {

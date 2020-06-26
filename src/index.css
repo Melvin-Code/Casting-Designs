@@ -452,7 +452,7 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  display: none;
+  /* display: none; */
   transform: translate(-50%, -50%);
   background-color: var(--main-bk-color);
   padding: 2rem;
@@ -484,6 +484,9 @@ button {
   font-size: 4.5rem;
   font-weight: bolder;
   padding-right: 16rem;
+}
+.about-page .about-page-holder2 .background-box .box-text-main, .about-page .about-page-holder2 .background-box .skills-title{
+margin-right: 6rem;
 }
 .about-page .about-page-holder1 .box-text-sub{
   font-size: 2.2rem;
@@ -517,19 +520,21 @@ button {
 }
 @keyframes fromLeft{
 0%{
-  left: -100%
+  left: -100%;
+  display: block;
 }
 100%{
-
+  display: block;
 }
 }
 
 @keyframes FromCt{
   0%{
-    
+    display: block;
   }
   100%{
     left: 200%;
+    display: block;
   }
 }
 #indicator-1{
@@ -554,8 +559,46 @@ button {
   width: 70rem;
   animation-name:  FromCt;
   animation-duration: 2s; 
+  height: auto;
 }
-
+.about-page .about-page-holder2 .box-text-sub{
+  display: flex;
+  justify-content: space-around;
+}
+.about-page .about-page-holder2 .box-text-sub .icon-container .skill-box{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.about-page .about-page-holder2 .box-text-sub .icon-container .skill-box .icon-box{
+  position: relative;
+  
+}
+.about-page .about-page-holder2 .box-text-sub .icon-container .skill-box .icon-box > div{
+  width: 4rem;
+  /* height: 4rem; */
+  margin: 2rem 0;
+}
+.about-page .about-page-holder2 .box-text-sub .icon-container .skill-box .icon-box #svg-icon{
+  height: 4rem;
+  position: relative;
+}
+.about-page .about-page-holder2 .box-text-sub .icon-container .skill-box .icon-box > div > svg{
+  width: 4rem;
+}
+.about-page .about-page-holder2 .box-text-sub .icon-container .skill-box .icon-box > div > i{
+  font-size: 4rem;
+}
+.about-page .about-page-holder2 .box-text-sub .icon-container .skill-box > p{
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-left: 1rem;
+}
+.about-page .about-page-holder2 #skills-indicator-box{
+  position: absolute;
+  right: 8rem;
+    bottom: 4.2rem;
+}
 
 /*////////////////////About Page////////////////////////////*/
 /*////////////////////About Page////////////////////////////*/
