@@ -3,12 +3,12 @@ import React, { Component } from "react";
 class Work extends Component {
   render() {
     return (
-      <div class="container">
-        <div>
+      <div class="work-page">
+        <div >
           <div>
-            <img></img>
-            <h3></h3>
-            <img></img>
+            <img alt=''></img>
+            <h3>l</h3>
+            <img alt=''></img>
           </div>
           <div>
             <p></p>
