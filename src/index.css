@@ -263,6 +263,26 @@ button {
   background-color: var(--main-bk-color);
   padding: 2rem;
   width: 80rem;
+  clip-path: circle(100%);
+  animation: MagicCircle;
+  animation-duration: 1.5s;
+}
+@keyframes MagicCircle {
+  0%{
+    left: 150%;
+    clip-path: circle(5% )
+  }
+  40%{
+    left: 47%;
+    clip-path: circle(5.0%)
+  }
+  50%{
+    left: 50%;
+    clip-path: circle(5.0%)
+  }
+  100%{
+    clip-path: circle(100%);
+  }
 }
 .contact-box .setter{
   position: relative;
