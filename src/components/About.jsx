@@ -27,7 +27,11 @@ class About extends Component {
   render() {
     return (
       <div className="about-page setter">
-        {console.log(this.state)}
+         <div  className="about-page-holder1 setter ">
+         
+         <Background/>
+         <Skills/>
+         </div>
       </div>
     );
   }

@@ -454,13 +454,116 @@ button {
   left: 50%;
   /* display: none; */
   transform: translate(-50%, -50%);
-  background-color: var(--main-bk-color);
-  padding: 2rem;
-  width: 70rem;
-  animation-name:  FromCt;
-  animation-duration: 2s; 
+  /* background-color: ; */
+  overflow: visible;
+  width: 90rem;
+  height: 43rem;
 }
-.about-page .about-page-holder1 .background-box, .about-page .about-page-holder2 .background-box {
+.about-page .about-page-holder1 .left-half{
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+  width: 55.3%;
+  height: 40rem;
+  background-color: var(--main-bk-color);
+  padding: 1.5rem;
+  position: absolute;
+  left: 0;
+  
+  animation-name: fromLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+.about-page .about-page-holder1 .left-half .title-holder, .about-page .about-page-holder1 .rigth-half .title-holder{
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: bolder;
+  margin-bottom: 2.5rem;
+  height: fit-content;
+  
+}
+.about-page .about-page-holder1 .left-half .box-text-content{
+  font-size: 2rem;
+  text-align: left;
+  font-weight: bolder;
+  line-height: 1.4;
+  margin-top: 4.8rem;
+  
+}
+@keyframes fromLeft{
+  0%{
+    left: -75rem;
+    display: block;
+  }
+  100%{
+    display: block;
+  }
+  }
+  @keyframes fromRigth{
+    0%{
+      right: -75rem;
+      display: block;
+    }
+    100%{
+      display: block;
+    }
+    }
+  .about-page .about-page-holder1 .rigth-half{
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: var(--main-bk-color);
+    width: 55.3%;
+    height: 40rem;
+    padding: 1.5rem;
+    position: absolute;
+    right: 0;
+    animation-name: fromRigth;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  }
+  .about-page .about-page-holder1 .rigth-half .title-holder{
+    padding-left: 8rem;
+  }
+  .about-page .about-page-holder1 .rigth-half .box-text-sub .icon-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .about-page .about-page-holder1 .rigth-half .box-text-sub .icon-container .skill-box .icon-box > div{
+    width: 3.5rem;
+    /* height: 3.5rem; */
+    /* margin: 2rem 0; */
+  }
+  .about-page .about-page-holder1 .rigth-half .box-text-sub .icon-container .skill-box .icon-box #svg-icon{
+    height: 3.5rem;
+    position: relative;
+  }
+  .about-page .about-page-holder1 .rigth-half .box-text-sub .icon-container .skill-box .icon-box > div > svg{
+    width: 3.5rem;
+  }
+  .about-page .about-page-holder1 .rigth-half .box-text-sub .icon-container .skill-box .icon-box > div > i{
+    font-size: 3.5rem;
+  }
+  .about-page .about-page-holder1 .rigth-half .box-text-sub .icon-container .skill-box > p{
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-left: 1rem;
+  }
+  .about-page .about-page-holder1 .rigth-half .box-text-sub .icon-container .skill-box .MD{
+    margin-left: 0;
+  }
+  .about-page .about-page-holder1 .rigth-half .box-text-sub .icon-container .skill-box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1.5rem;
+  }
+  .about-page .about-page-holder1 .rigth-half .box-text-sub{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 28rem;
+
+  }
+/* .about-page .about-page-holder1 .background-box, .about-page .about-page-holder2 .background-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -493,20 +596,20 @@ margin-right: 6rem;
   text-align: left;
   font-weight: bolder;
   /* padding-bottom: 1rem; */
-}
+/*}
 .about-page .about-page-holder1 .indicator-box{
   display: flex;
   align-items: center;
   justify-content: flex-end;
   /* flex-direction: column; */
   /* margin-bottom: 1rem; */
-  padding-right: 2rem;
-}
+  /* padding-right: 2rem; */
+/*}
 .about-page .about-page-holder1 .indicator-box #indicator-1, #indicator-2, #indicator-3{
  height: 2rem;
  display: inline-block;
  /* transform: translateY(50%); */
-}
+/* } 
 @keyframes arrow {
   0%{
     color: white;
@@ -518,15 +621,7 @@ margin-right: 6rem;
     color: white;
   }
 }
-@keyframes fromLeft{
-0%{
-  left: -100%;
-  display: block;
-}
-100%{
-  display: block;
-}
-}
+
 
 @keyframes FromCt{
   0%{
@@ -577,8 +672,8 @@ margin-right: 6rem;
 .about-page .about-page-holder2 .box-text-sub .icon-container .skill-box .icon-box > div{
   width: 4rem;
   /* height: 4rem; */
-  margin: 2rem 0;
-}
+  /* margin: 2rem 0; */
+/*}
 .about-page .about-page-holder2 .box-text-sub .icon-container .skill-box .icon-box #svg-icon{
   height: 4rem;
   position: relative;
@@ -598,7 +693,7 @@ margin-right: 6rem;
   position: absolute;
   right: 8rem;
     bottom: 4.2rem;
-}
+} */
 
 /*////////////////////About Page////////////////////////////*/
 /*////////////////////About Page////////////////////////////*/

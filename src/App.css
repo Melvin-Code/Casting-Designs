@@ -176,3 +176,10 @@ svg {
 .page-boxes{
 	box-shadow: 1px 1px 6px 0px #000000;
 }
+#shadow-wraper1{
+	filter: drop-shadow(-4px 1px 6px rgba(240, 238, 238, 0.418));
+	
+}
+/* #shadow-wraper2{
+	filter: drop-shadow(2px 1px 6px rgba(0, 0, 0, 0.418));
+} */
