@@ -588,3 +588,101 @@ button {
 /*////////////////////About Page////////////////////////////*/
 /*////////////////////About Page////////////////////////////*/
 /*////////////////////About Page////////////////////////////*/
+/*////////////////////work Page////////////////////////////*/
+/*////////////////////work Page////////////////////////////*/
+/*////////////////////work Page////////////////////////////*/
+.work-page{
+  width: 100vw;
+  height: 100vh;
+}
+.work-page .work-card-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  
+}
+.work-page .work-card-container .work-card{
+  width: 30rem;
+  height: 45rem;
+  
+}
+.work-page .work-card-container .work-card .wc-up-sec{
+  background-color: white;
+  height: 45%;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+  position: relative;
+}
+.work-page .work-card-container .work-card .wc-up-sec .screenshot{
+  width: 30rem;
+  
+}
+.work-page .work-card-container .work-card  .wc-header{
+  position: absolute;
+  background-color: #4a9ea6;
+  top: -5.6rem;
+  width: 29.2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: .4rem;
+  align-items: center;
+}
+.work-page .work-card-container .work-card .wc-header .site-name{
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    margin-right: 4rem;
+}
+.work-page .work-card-container .work-card .wc-header .site-logo-box{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: solid 2px #0e3d51 ;
+  position: relative;
+  background-color: white;
+  margin-left: 1rem;
+} 
+.work-page .work-card-container .work-card .wc-header .site-logo-box .site-logo{
+  width: 3.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.work-page .work-card-container .work-card .wc-dwnBelow-sec{
+ background-color: var(--main-bk-color) ;
+ height: 75%;
+ clip-path: polygon(50% 24%, 100% 15%, 100% 100%, 0 100%, 0 15%);
+ transform: translateY(-25%);
+ color: white;
+}
+.work-page .work-card-container .work-card .wc-dwnBelow-sec .dwnBelow-container{
+
+position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20rem;
+}
+.work-page .work-card-container .work-card .wc-dwnBelow-sec .site-text{
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+.work-page .work-card-container .work-card .wc-dwnBelow-sec .btns-container{
+display: flex;
+justify-content: center;
+}
+.work-page .work-card-container .work-card .wc-dwnBelow-sec .btns-container > a{
+  padding: 0 1rem;
+}
+
+
+
+
+
+/*////////////////////work Page////////////////////////////*/
+/*////////////////////work Page////////////////////////////*/
+/*////////////////////work Page////////////////////////////*/
