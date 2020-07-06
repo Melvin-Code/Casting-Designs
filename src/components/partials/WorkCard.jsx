@@ -71,6 +71,9 @@ class WorkCard extends Component {
             width: this.props.widthS
             
         }
+        let languagesBox = {
+          fontSize: this.props.lBsize
+        }
         return (
             
           <div onMouseOver={this.onOver}
@@ -100,6 +103,7 @@ class WorkCard extends Component {
                 <div className="btns-container">
                   <Link to={this.props.gitLink}>
                     <Buttons
+                      
                       text={<p>Read the code</p>}
                       background="#9fb1bb"
                       font="1.5rem"
@@ -137,8 +141,8 @@ class WorkCard extends Component {
               <div className={`shadowing ${this.hideOrShow()}`}>
                 <div style={above} className={`wc-dwnAbove-sec`}>
                   <div className='languages-container'>
-                    <div className="languages-box">
-                      {this.props.ReactJs === 'active' ? <ReactJs /> : null}
+                    <div style={languagesBox} className="languages-box">
+                      {this.props.ReactJs === 'active' ? <ReactJs lBsize={this.props.lBsize} /> : null}
                       {this.props.Css === 'active' ? <Css/>  : null}
                       {this.props.Html === 'active' ? <Html/> : null}
                       {this.props.JavaScript === 'active' ? <JavaScript/> : null}

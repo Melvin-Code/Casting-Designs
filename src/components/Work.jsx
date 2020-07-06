@@ -39,6 +39,7 @@ class Work extends Component {
             Html="active"
             Css="active"
             JavaScript="active"
+            lBsize='2rem'
         />
         <WorkCard
             mainColor='#27014e'

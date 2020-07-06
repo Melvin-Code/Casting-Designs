@@ -4,29 +4,10 @@ import Skills from "./partials/Skills";
 import Background from "./partials/Background";
 
 class About extends Component {
-//   state = {
-//     indicator: true,
-//     counter: 0,
-//     bkDis: 'block',
-//     bkName: 'fromLeft',
-//     skDis: 'none',
-//     skName: 'FromCt',
-//   };
 
-  
-//   setter=(first, second, third, forth)=>{
-  
-//     this.setState({
-//       [first]: 'FromCt',
-//       [second]: 'none',
-//       [third]: 'fromLeft',
-//       [forth]: 'block'
-//     })
-  
-// }
   render() {
     return (
-      <div className="about-page setter">
+      <div className="about-page ">
          <div  className="about-page-holder1 setter ">
          
          <Background/>

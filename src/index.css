@@ -33,6 +33,34 @@ button {
   color: white;
   font-size: 2.2rem;
 }
+::-moz-selection {
+  background-color: rgb(39, 1, 78);
+  color: white;
+}
+
+::selection {
+  background-color: rgb(39, 1, 78);
+  color: white;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: rgb(51, 28, 76)
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: rgb(51, 28, 76)
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgb(39, 1, 78);
+}
 
 /*////////////////////Questions////////////////////////////*/
 /*////////////////////Questions////////////////////////////*/
@@ -63,7 +91,7 @@ button {
   align-items: center;
   height: 15vh;
   /* box-shadow: -6px -4px 13px 0px black; */
-  position: fixed;
+  
   z-index: 30;
   width: 100%;
 }
@@ -125,16 +153,16 @@ button {
 /*////////////////////Landing page////////////////////////////*/
 /*////////////////////Landing page////////////////////////////*/
 .lan-page {
-  height: 100vh;
+  height: 85vh;
   width: 100vw;
   position: relative;
 }
 
 .lan-page .learn-mor-box {
   position: absolute;
-  top: 33%;
-  left: 73%;
-  transform: translateX(-100%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   animation-name: magicText;
   animation-duration: 2s;
   background-color: var(--main-bk-color);
@@ -194,7 +222,7 @@ button {
     box-shadow: none;
   }
   100% {
-    top: 33%;
+    top: 50%;
     height: 32rem;
   }
 }
@@ -254,6 +282,11 @@ button {
 /*////////////////////Contact Page////////////////////////////*/
 /*////////////////////Contact Page////////////////////////////*/
 /*////////////////////Contact Page////////////////////////////*/
+.contact-page{
+  position: relative;
+  width: 100vw;
+  height: 85vh;
+}
 .contact-box {
   color: white;
   position: absolute;
@@ -465,7 +498,8 @@ button {
 /*////////////////////About Page////////////////////////////*/
 .about-page{
   width: 100vw;
-  height: 100vh;
+  height: 85vh;
+  position: relative;
 }
 .about-page .about-page-holder1{
   color: white;
@@ -608,7 +642,8 @@ button {
 .work-page .work-card-container .work-card{
   width: 30rem;
   height: 45rem;
-  margin: 0 2rem 2rem 0;
+  margin: 0 1.5rem 10rem 1.5rem;
+  position: relative;
 }
 .work-page .work-card-container .work-card .wc-up-shadow{
   height: 45%;

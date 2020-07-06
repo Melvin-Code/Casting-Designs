@@ -5,6 +5,7 @@ import Form from "./partials/Form";
 class Contact extends Component {
   render() {
     return (
+      <div className='contact-page setter'>
       <div className="contact-box page-boxes">
       <div className='setter'>
         <div className="form-text-box">
@@ -30,6 +31,7 @@ class Contact extends Component {
           </p>
         </div>
         </div>
+      </div>
       </div>
     );
   }
