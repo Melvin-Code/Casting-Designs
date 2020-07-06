@@ -599,27 +599,37 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -35%);
-  
+  transform: translate(-50%, -15%);
+  width: 90vw;
+  display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .work-page .work-card-container .work-card{
   width: 30rem;
   height: 45rem;
-  
+  margin: 0 2rem 2rem 0;
+}
+.work-page .work-card-container .work-card .wc-up-shadow{
+  height: 45%;
+  filter: drop-shadow(0px 5px 0px rgb(146, 144, 144));
 }
 .work-page .work-card-container .work-card .wc-up-sec{
   background-color: white;
-  height: 45%;
+  height: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
   position: relative;
 }
 .work-page .work-card-container .work-card .wc-up-sec .screenshot{
   width: 30rem;
-  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
 }
 .work-page .work-card-container .work-card  .wc-header{
   position: absolute;
-  background-color: #4a9ea6;
+  /* background-color: #4a9ea6; */
   top: -5.6rem;
   width: 29.2rem;
   display: flex;
@@ -638,9 +648,9 @@ button {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  border: solid 2px #0e3d51 ;
+  border: solid 2px  ;
   position: relative;
-  background-color: white;
+  
   margin-left: 1rem;
 } 
 .work-page .work-card-container .work-card .wc-header .site-logo-box .site-logo{
@@ -654,7 +664,7 @@ button {
  background-color: var(--main-bk-color) ;
  height: 74%;
  clip-path: polygon(50% 24%, 100% 15%, 100% 100%, 0 100%, 0 15%);
- transform: translateY(-25%);
+ transform: translateY(-22.65%);
  color: white;
 }
 .work-page .work-card-container .work-card .wc-dwnBelow-sec .dwnBelow-container{
@@ -691,7 +701,7 @@ justify-content: center;
  }
  
  .work-page .work-card-container .work-card .wc-dwnBelow-sec .shadowing{
-   filter: drop-shadow(0px -5px 0px rgba(240, 238, 238, 0.418));
+   filter: drop-shadow(0px -5px 0px rgb(146, 144, 144));
    height: 100%;
    width: 100%;
    clip-path: polygon(50% 24%, 100% 15%, 100% 100%, 0 100%, 0 15%);
