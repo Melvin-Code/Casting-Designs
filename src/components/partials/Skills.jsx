@@ -31,10 +31,10 @@ class Skills extends Component {
               <BootStrap />
             </div>
             <div className="icon-container">
-              <Mongo />
-              <Sass />
-              <ReactJs />
-              <Electron />
+             <div><Mongo /></div>
+              <div><Sass /></div>
+              <div><ReactJs /></div>
+              <div><Electron /></div>
             </div>
           </div>
         </div>

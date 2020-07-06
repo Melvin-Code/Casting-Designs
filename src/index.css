@@ -652,7 +652,7 @@ button {
 }
 .work-page .work-card-container .work-card .wc-dwnBelow-sec{
  background-color: var(--main-bk-color) ;
- height: 75%;
+ height: 74%;
  clip-path: polygon(50% 24%, 100% 15%, 100% 100%, 0 100%, 0 15%);
  transform: translateY(-25%);
  color: white;
@@ -678,7 +678,105 @@ justify-content: center;
 .work-page .work-card-container .work-card .wc-dwnBelow-sec .btns-container > a{
   padding: 0 1rem;
 }
-
+.work-page .work-card-container .work-card .wc-dwnBelow-sec .wc-dwnAbove-sec{
+  background-color: rgb(74, 158, 166) ;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(50% 24%, 100% 15%, 100% 100%, 0 100%, 0 15%);
+  transform: translateY(-25%);
+  color: white;
+  position: absolute;
+    bottom: -8.8rem;
+    
+ }
+ 
+ .work-page .work-card-container .work-card .wc-dwnBelow-sec .shadowing{
+   filter: drop-shadow(0px -5px 0px rgba(240, 238, 238, 0.418));
+   height: 100%;
+   width: 100%;
+   clip-path: polygon(50% 24%, 100% 15%, 100% 100%, 0 100%, 0 15%);
+   transform: translateY(-25%);
+   color: white;
+   position: absolute;
+   bottom: -8.2rem;
+  }
+  .work-page .work-card-container .work-card .wc-dwnBelow-sec  .over{
+    animation: over .5s;
+    bottom: -31rem ;
+    
+  }
+  .work-page .work-card-container .work-card .wc-dwnBelow-sec  .out{
+   animation: out .5s;
+   bottom: -8.2rem
+ }
+  @keyframes over {
+   0%{
+     bottom: -8.2rem;
+   }
+   100%{
+     bottom: -31rem;
+   }
+ }
+ @keyframes out {
+  0%{
+    bottom: -31rem;
+  }
+  100%{
+    bottom: -8.2rem;
+  }
+}
+.work-page .work-card-container .work-card .wc-dwnBelow-sec .shadowing .wc-dwnAbove-sec .languages-container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.work-page .work-card-container .work-card .wc-dwnBelow-sec .shadowing .wc-dwnAbove-sec .languages-container .languages-box{
+/* background-color: red; */
+position: absolute;
+width: 70%;
+height: 60%;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -30%);
+display: flex;
+justify-content: space-around;
+/* flex-wrap: wrap;
+ */
+ flex-direction: column;
+    align-items: flex-start;
+}
+.work-page .work-card-container .work-card .wc-dwnBelow-sec .shadowing .wc-dwnAbove-sec .languages-container .languages-box .skill-box{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0 0 .2rem .5rem;
+  align-items: center;
+  border-bottom: white .6px dashed;
+  
+}
+.work-page .work-card-container .work-card .wc-dwnBelow-sec .shadowing .wc-dwnAbove-sec .languages-container .languages-box .skill-box .icon-box{
+  width: 3rem;
+  height: 3rem;
+  padding-right: .5rem;
+}
+.work-page .work-card-container .work-card .wc-dwnBelow-sec .shadowing .wc-dwnAbove-sec .languages-container .languages-box .skill-box .icon-box #svg-icon{
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+}
+.work-page .work-card-container .work-card .wc-dwnBelow-sec .shadowing .wc-dwnAbove-sec .languages-container .languages-box .skill-box .icon-box #svg-icon > svg {
+  width: 3rem;
+  position: absolute;
+  top: 0px;
+}
+.work-page .work-card-container .work-card .wc-dwnBelow-sec .shadowing .wc-dwnAbove-sec .languages-container .languages-box .skill-box .icon-box > div > i {
+  font-size: 3rem;
+  
+}
+.work-page .work-card-container .work-card .wc-dwnBelow-sec .shadowing .wc-dwnAbove-sec .languages-container .languages-box .skill-box > p{
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
 
 
 
