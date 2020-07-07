@@ -22,6 +22,7 @@ class Work extends Component {
             Html="active"
             Css="active"
             JavaScript="active"
+            lBsize='2rem'
         />
         <WorkCard
             mainColor='#344559'
@@ -39,39 +40,45 @@ class Work extends Component {
             Html="active"
             Css="active"
             JavaScript="active"
+            Express='active'
+            Mongo='active'
             lBsize='2rem'
+            iconBk='white'
         />
-        <WorkCard
-            mainColor='#27014e'
-            secondaryColor='white'
-            lBBackground='#0b0161'
-            title='Casting Desgins'
-            logo="/Casting -logo (1)/vector/isolated-monochrome-white.svg"
-            logoTop='57%'
-            screenshot="/CdesScreen.png"
-            siteText='A portfolio of my own creation to show my work to the world'
+        {/* <WorkCard
+            mainColor='#516894'
+            secondaryColor='#b2aeaa'
+            lBBackground='rgb(52, 111, 109)'
+            title='Super Supervisor'
+            logo="/SuperLogo.png"
+            logoTop='50%'
+            screenshot="/SuperScreen.png"
+            widthS="35rem"
+            siteText='A small browser base videogame made with Phaser3'
             gitLink='https://github.com/Melvin-Code/Casting-Designs'
             liveLink='https://casting-designs.com'
+            Html="active"
+            Css="active"
+            JavaScript="active"
+        /> */}
+        <WorkCard
+            mainColor='#282828'
+            secondaryColor='#282828'
+            lBBackground='#282828'
+            title='Team Generator'
+            logo="/CodeLogo.svg"
+            logoTop='50%'
+            logoWidth='5rem'
+            screenshot="/CodeScreen.png"
+            siteText='A place to ask all your programing questions'
+            gitLink='https://github.com/Melvin-Code/Code-Helper'
+            liveLink='https://the-melvin-code.com/'
             ReactJs='active'
             Html="active"
             Css="active"
             JavaScript="active"
-        />
-        <WorkCard
-            mainColor='#27014e'
-            secondaryColor='white'
-            lBBackground='#0b0161'
-            title='Casting Desgins'
-            logo="/Casting -logo (1)/vector/isolated-monochrome-white.svg"
-            logoTop='57%'
-            screenshot="/CdesScreen.png"
-            siteText='A portfolio of my own creation to show my work to the world'
-            gitLink='https://github.com/Melvin-Code/Casting-Designs'
-            liveLink='https://casting-designs.com'
-            ReactJs='active'
-            Html="active"
-            Css="active"
-            JavaScript="active"
+            Heroku='active'
+            lBsize='2rem'
         />
         
         {console.log(this.state)}

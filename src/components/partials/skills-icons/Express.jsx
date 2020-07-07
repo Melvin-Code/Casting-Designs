@@ -1,18 +1,32 @@
 import React, { Component } from "react";
-
+import Radium from "radium"
+// import Background from "../Background";
 class Express extends Component {
   render() {
+    let iconBox={
+      width: this.props.lBsize,
+      height: this.props.lBsize,
+      backgroundColor: this.props.iconBk
+    }
+    let i={
+      fontSize: this.props.lBsize,
+      
+    }
+    let p={
+      fontSize: this.props.lBsize,
+      
+    }
     return (
       <div className="skill-box">
-        <div className="icon-box setter">
+        <div style={iconBox} className="icon-box setter">
           <div>
-            <i className="devicon-express-original colored"></i>
+            <i style={i} className="devicon-express-original colored"></i>
           </div>
         </div>
-        <p>Express.js</p>
+        <p style={p}>Express.js</p>
       </div>
     );
   }
 }
 
-export default Express;
+export default Radium(Express);

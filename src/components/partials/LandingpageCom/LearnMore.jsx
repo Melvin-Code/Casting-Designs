@@ -11,11 +11,11 @@ class LearnMore extends Component {
       <div className="learn-mor-box">
         <h2 className="intro-text">
           <span>
-            Hi, my name is Melvin & I am a <br></br> {"{"}
+            Hi, my name is Melvin & I am a {"{"}
             <span></span>full-stack: web-developer
             {"}"}
           </span>
-          <br />
+          
           <span className="sub-text">
             My mission is to create astoneshing looking websites that meets all
             your needs

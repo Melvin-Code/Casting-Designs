@@ -1,13 +1,29 @@
 import React, { Component } from "react";
-
+import Radium from "radium"
 class Sass extends Component {
   render() {
+    let iconBox={
+      width: this.props.lBsize,
+      height: this.props.lBsize
+    }
+    let svgIcon={
+      width: this.props.lBsize,
+      height: this.props.lBsize
+    }
+    let svg={
+      width: this.props.lBsize,
+      
+    }
+    let p={
+      fontSize: this.props.lBsize,
+      
+    }
     return (
       <div className="skill-box">
-        <div className="icon-box setter">
-          <div id="svg-icon">
+        <div style={iconBox} className="icon-box setter">
+          <div style={svgIcon} id="svg-icon">
             {" "}
-            <svg viewBox="0 0 128 128">
+            <svg style={svg} viewBox="0 0 128 128">
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
@@ -17,10 +33,10 @@ class Sass extends Component {
             </svg>
           </div>
         </div>
-        <p>Sass</p>
+        <p style={p} >Sass</p>
       </div>
     );
   }
 }
 
-export default Sass;
+export default Radium(Sass);

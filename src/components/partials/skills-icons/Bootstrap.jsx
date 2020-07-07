@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Radium from "radium"
 class BootStrap extends Component {
   render() {
     let iconBox={
@@ -36,4 +36,4 @@ class BootStrap extends Component {
   }
 }
 
-export default BootStrap;
+export default Radium(BootStrap);

@@ -14,25 +14,28 @@ class Buttons extends Component {
   render() {
     let backing = {
       border: this.toggler(),
-      width: this.props.width2,
-      height: this.props.height2,
+      width: this.props.width1,
+      height: this.props.height1,
+      
       backgroundColor: "transparent",
       ":hover": {
         backgroundColor: this.props.background,
+
       },
     };
     let fonting = {
       fontSize: this.props.font,
       fontWeight: this.props.weight,
       fontFamily: "lato",
+      transition: '.5s',
     };
     let animatio1 = {
       width: this.props.width1,
       height: this.props.height1
     };
     let animatio3 = {
-      width: this.props.width3,
-      height: this.props.height3
+      width: this.props.width1,
+      height: this.props.height1
     };
 
     return (

@@ -1,12 +1,28 @@
 import React, { Component } from "react";
-
+import Radium from "radium"
 class Html extends Component {
   render() {
+    let iconBox={
+      width: this.props.lBsize,
+      height: this.props.lBsize
+    }
+    let svgIcon={
+      width: this.props.lBsize,
+      height: this.props.lBsize
+    }
+    let svg={
+      width: this.props.lBsize,
+      
+    }
+    let p={
+      fontSize: this.props.lBsize,
+      
+    }
     return (
       <div className="skill-box">
-        <div className="icon-box setter">
-          <div id="svg-icon">
-            <svg viewBox="0 0 128 128">
+        <div style={iconBox} className="icon-box setter">
+          <div style={svgIcon} id="svg-icon">
+            <svg style={svg} viewBox="0 0 128 128">
               <path
                 fill="#E44D26"
                 d="M19.037 113.876l-10.005-112.215h109.936l-10.016 112.198-45.019 12.48z"
@@ -26,10 +42,10 @@ class Html extends Component {
             </svg>
           </div>
         </div>
-        <p>HTML5</p>
+        <p style={p} >HTML5</p>
       </div>
     );
   }
 }
 
-export default Html;
+export default Radium(Html);

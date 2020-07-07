@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Radium from "radium"
-class Electron extends Component {
+class Heroku extends Component {
   render() {
     let iconBox={
       width: this.props.lBsize,
@@ -15,16 +15,16 @@ class Electron extends Component {
       
     }
     return (
-      <div className="skill-box">
+      <div  className="skill-box">
         <div style={iconBox} className="icon-box setter">
           <div>
-            <i style={i} className="devicon-electron-original colored"></i>
+            <i style={i} className="devicon-heroku-plain colored"></i>
           </div>
         </div>
-        <p style={i}> Electron</p>
+        <p style={p}>React</p>
       </div>
     );
   }
 }
 
-export default Radium(Electron);
+export default Radium(Heroku);

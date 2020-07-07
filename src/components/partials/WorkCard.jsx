@@ -12,6 +12,7 @@ import BootStrap from './skills-icons/Bootstrap';
 import Sass from './skills-icons/Sass';
 import NodeJs from './skills-icons/Node';
 import Electron from './skills-icons/Electron';
+import Heroku from './skills-icons/Heroku';
 class WorkCard extends Component {
     state = {
         over: false,
@@ -54,14 +55,16 @@ class WorkCard extends Component {
       };
     render() {
         let header = {
-            backgroundColor: this.props.mainColor
+            backgroundColor: this.props.mainColor,
+            color: this.props.fontColor
         }
         let logoBox = {
             borderColor: this.props.secondaryColor,
             backgroundColor: this.props.lBBackground
         }
         let logo = {
-            top: this.props.logoTop
+            top: this.props.logoTop,
+            width: this.props.logoWidth
             
         }
         let above={
@@ -72,18 +75,24 @@ class WorkCard extends Component {
             
         }
         let languagesBox = {
-          fontSize: this.props.lBsize
+          fontSize: this.props.lBsize,
+          color: this.props.fontColor
         }
+        let siteName={
+          color: this.props.fontColor
+        }
+        
+        
         return (
             
           <div onMouseOver={this.onOver}
-          onMouseOut={this.onOut} className="work-card page-boxes setter">
+          onMouseOut={this.onOut}  className="work-card page-boxes setter">
             <div style={header} className="wc-header">
               <div style={logoBox} className="site-logo-box">
                 {" "}
                 <img style={logo} className="site-logo" alt="" src={this.props.logo}></img>
               </div>
-              <h3 className="site-name">{this.props.title}</h3>
+              <h3 style={siteName} className="site-name">{this.props.title}</h3>
             </div>
             <div className='wc-up-shadow'>
             <div  className="wc-up-sec setter">
@@ -143,15 +152,16 @@ class WorkCard extends Component {
                   <div className='languages-container'>
                     <div style={languagesBox} className="languages-box">
                       {this.props.ReactJs === 'active' ? <ReactJs lBsize={this.props.lBsize} /> : null}
-                      {this.props.Css === 'active' ? <Css/>  : null}
-                      {this.props.Html === 'active' ? <Html/> : null}
-                      {this.props.JavaScript === 'active' ? <JavaScript/> : null}
-                      {this.props.Express === 'active' ? <Express/> : null}
-                      {this.props.Mongo === 'active' ? <Mongo/> : null}
-                      {this.props.BootStrap === 'active' ? <BootStrap/> : null}
-                      {this.props.Sass === 'active' ? <Sass/> : null}
-                      {this.props.NodeJs === 'active' ? <NodeJs/> : null}
-                      {this.props.Electron === 'active' ? <Electron/> : null}
+                      {this.props.Css === 'active' ? <Css lBsize={this.props.lBsize}/>  : null}
+                      {this.props.Html === 'active' ? <Html lBsize={this.props.lBsize}/> : null}
+                      {this.props.JavaScript === 'active' ? <JavaScript lBsize={this.props.lBsize}/> : null}
+                      {this.props.Express === 'active' ? <Express iconBk={this.props.iconBk} lBsize={this.props.lBsize}/> : null}
+                      {this.props.Mongo === 'active' ? <Mongo lBsize={this.props.lBsize}/> : null}
+                      {this.props.BootStrap === 'active' ? <BootStrap lBsize={this.props.lBsize}/> : null}
+                      {this.props.Sass === 'active' ? <Sass lBsize={this.props.lBsize}/> : null}
+                      {this.props.NodeJs === 'active' ? <NodeJs lBsize={this.props.lBsize}/> : null}
+                      {this.props.Electron === 'active' ? <Electron lBsize={this.props.lBsize}/> : null}
+                      {this.props.Heroku === 'active' ? <Heroku lBsize={this.props.lBsize} /> : null}
                       
                       
                       

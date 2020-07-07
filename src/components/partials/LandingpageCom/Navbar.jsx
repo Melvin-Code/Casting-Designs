@@ -4,14 +4,52 @@ import FlyingLogo from "./FlyingLogo";
 import Buttons from "../Buttons";
 
 class NavBar extends Component {
+  state={
+    size:null
+  }
+  handleResize=()=> {
+     let widthScreen = window.innerWidth
+    if(widthScreen <= 414 ){
+      this.setState({
+        size: 414
+      })
+    }else if(widthScreen<=920 && widthScreen >= 661){
+      this.setState({
+        size: 920
+      })
+    }else if(widthScreen<=660 && widthScreen>=415){
+      this.setState({
+        size: 660
+      })
+    }else if(widthScreen>=920){
+      this.setState({
+        size: 'normal'
+      })
+    }
+
+  }
+  chosingSize=(small, mid, big, normal)=>{
+    if(this.state.size===414){
+      return small
+    }else if (this.state.size === 920){
+      return big
+    }else if(this.state.size === 660){
+      return mid
+    }else if(this.state.size === 'normal'){
+      return normal
+    }
+  }
+  
+
     
     
-      
     render() {
+      window.addEventListener('resize', this.handleResize)
+      window.addEventListener('load', this.handleResize)
     return (
         <nav  onClick={()=>this.props.rendering()} className="navbar">
         
-        <FlyingLogo />
+        <div className='fly-logo-container'><FlyingLogo /></div>
         <div className="navbar-box">
         <div id="nav-link"   >
           <Link  className="link" to="/About">
@@ -21,11 +59,10 @@ class NavBar extends Component {
               font="2.8rem"
               weight="bolder"
               border="none"
-              polyWidth= '130'
-              polyheight= '59'
-              width1= '130px'
-              width2= '130px'
-              width3= '130px'
+              polyWidth= {this.chosingSize('50','60', '70', '130')}
+              polyheight= {this.chosingSize('30', '30','40', '59')}
+              width1= {this.chosingSize('50px','60px', '70px', '130px')}
+              height1= {this.chosingSize('30px','30px', '40px', '59px')}
               newBorder = '1px solid #91C9FF'
               choice = {this.props.path === '/About'? true: false}
             />
@@ -40,11 +77,10 @@ class NavBar extends Component {
               font="2.8rem"
               weight="bolder"
               border="none"
-              polyWidth= '150'
-              polyheight= '59'
-              width1= '150px'
-              width2= '150px'
-              width3= '150px'
+              polyWidth= {this.chosingSize('60','70', '80', '130')}
+              polyheight= {this.chosingSize('30', '30', '40','59')}
+              width1= {this.chosingSize('60px','70px', '80px', '130px')}
+              height1= {this.chosingSize('30px', '30px','40px', '59px')}            
               newBorder = '1px solid #91C9FF'
               choice = {this.props.path === '/Contact'? true: false}
             />
@@ -59,17 +95,17 @@ class NavBar extends Component {
               font="2.8rem"
               weight="bolder"
               border="none"
-              polyWidth= '130'
-              polyheight= '59'
-              width1= '130px'
-              width2= '130px'
-              width3= '130px'
+              polyWidth= {this.chosingSize('50','60', '70', '130')}
+              polyheight= {this.chosingSize('30', '30','40', '59')}
+              width1= {this.chosingSize('50px', '60px','70px', '130px')}
+              height1= {this.chosingSize('30px', '30px','40px', '59px')}
               newBorder = '1px solid #91C9FF'
               choice = {this.props.path === '/Work'? true: false}
             />
           </Link>
           </div>
         </div>
+        {console.log(this.state)}
       </nav>
     );
   }

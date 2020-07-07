@@ -87,17 +87,17 @@ button {
   display: flex;
   /* background-image: linear-gradient(to bottom right, darkblue, purple); */
   background-color: transparent;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 15vh;
   /* box-shadow: -6px -4px 13px 0px black; */
   
   z-index: 30;
-  width: 100%;
+  width: 100vw;
 }
 .navbar .navbar-box {
-  position: absolute;
-  right: 0;
+  /* position: absolute; */
+  /* right: 0; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -108,15 +108,19 @@ button {
   color: white;
   font-size: 2.8rem;
   font-weight: bolder;
-  transition: all 0.5s;
+  transition: .5s;
   width: auto;
   background-color: transparent;
   border: none;
   margin: 0 1rem 0 1rem;
 }
+.navbar .fly-logo-container{
+  width: 26rem;
+  height: 10rem;
+}
 .navbar .Fly-logo-box {
   position: absolute;
-  top: 1rem;
+  /* top: 1rem; */
   left: 5%;
   display: flex;
   align-items: center;
@@ -130,6 +134,7 @@ button {
 
 .navbar .Fly-logo-box .logo {
   width: 12rem;
+  transition: .5s;
   animation-name: FlyingLogo;
   animation-duration: 2s;
 }
@@ -140,6 +145,7 @@ button {
   font-size: 3.5rem;
   font-weight: bold;
   padding-left: 1rem;
+  transition: .5s
 }
 .navbar .Fly-logo-box .co-name .co-name-dwn {
   transform: translateY(-17%);
@@ -226,9 +232,10 @@ button {
     height: 32rem;
   }
 }
+
 @keyframes Flying {
   0% {
-    top: 60rem;
+    top: 62rem;
     left: 110%;
     height: 15rem;
     width: 13rem;
@@ -236,14 +243,14 @@ button {
   }
   40% {
     left: 5%;
-    top: 60rem;
+    top: 62rem;
     height: 15rem;
     width: 13rem;
     /* transform: rotate(0deg); */
   }
   60% {
     left: 5%;
-    top: 60rem;
+    top: 62rem;
     height: 15rem;
     width: 13rem;
     /* transform: rotate(0deg); */
@@ -252,7 +259,7 @@ button {
     width: 13rem;
   }
   90% {
-    top: 1rem;
+    top: 1.4rem;
     width: 13rem;
   }
   100% {
@@ -260,6 +267,7 @@ button {
     /* transform: rotate(0deg); */
   }
 }
+
 @keyframes FlyingLogo {
   0% {
     transform: rotate(-90deg);
@@ -627,13 +635,14 @@ button {
 /*////////////////////work Page////////////////////////////*/
 .work-page{
   width: 100vw;
-  height: 100vh;
+  height:85vh;
+  position: relative;
 }
 .work-page .work-card-container{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -15%);
+  transform: translate(-50%, -40%);
   width: 90vw;
   display: flex;
     justify-content: space-evenly;
@@ -701,6 +710,7 @@ button {
  clip-path: polygon(50% 24%, 100% 15%, 100% 100%, 0 100%, 0 15%);
  transform: translateY(-22.65%);
  color: white;
+ overflow: hidden;
 }
 .work-page .work-card-container .work-card .wc-dwnBelow-sec .dwnBelow-container{
 
@@ -802,7 +812,7 @@ justify-content: space-around;
 .work-page .work-card-container .work-card .wc-dwnBelow-sec .shadowing .wc-dwnAbove-sec .languages-container .languages-box .skill-box .icon-box{
   width: 3rem;
   height: 3rem;
-  padding-right: .5rem;
+  margin-right: .5rem;
 }
 .work-page .work-card-container .work-card .wc-dwnBelow-sec .shadowing .wc-dwnAbove-sec .languages-container .languages-box .skill-box .icon-box #svg-icon{
   width: 3rem;
@@ -829,3 +839,153 @@ justify-content: space-around;
 /*////////////////////work Page////////////////////////////*/
 /*////////////////////work Page////////////////////////////*/
 /*////////////////////work Page////////////////////////////*/
+/*////////////////////Mobile Lan-page////////////////////////////*/
+/*////////////////////Mobile Lan-page////////////////////////////*/
+/*////////////////////Mobile Lan-page////////////////////////////*/
+
+@media  screen and (max-width: 414px) {
+  html{
+    font-size: 35%;
+  }
+  .lan-page .learn-mor-box{
+    width: 51rem;
+    height: 52rem;
+    /* animation-name: magicText414; */
+  }
+  @keyframes magicText {
+    0% {
+      top: 84%;
+      width: 0;
+      height: 5rem;
+      box-shadow: none;
+    }
+    8.6% {
+      top: 84%;
+      width: 0;
+      height: 5rem;
+    }
+    40% {
+      top: 84%;
+      width: 51rem;
+      height: 5rem;
+      box-shadow: none;
+    }
+    60% {
+      top: 84%;
+      width: 51rem;
+      height: 5rem;
+      box-shadow: none;
+    }
+    100% {
+      top: 50%;
+      height: 52rem;
+    }
+  }
+  @keyframes FlyingLogo {
+    0%{
+
+    }
+    100%{
+
+    }
+  }
+  @keyframes Flying {
+    0%{
+
+    }
+    100%{
+
+    }
+  }
+  .lan-page .learn-mor-box .intro-text > span{
+    font-size: 5.7rem ;
+  }
+  .lan-page .learn-mor-box .intro-text .sub-text{
+    font-size: 3.9rem ;
+  }
+  
+}
+@media only screen and (max-width: 920px) and (min-width: 661px) {
+  html{
+    font-size: 45%;
+  }
+  @keyframes Flying {
+    0% {
+      top: 89rem;
+      left: 110%;
+      height: 15rem;
+      width: 13rem;
+      /* transform: rotate(90deg); */
+    }
+    40% {
+      left: 5%;
+      top: 89rem;
+      height: 15rem;
+      width: 13rem;
+      /* transform: rotate(0deg); */
+    }
+    60% {
+      left: 5%;
+      top: 89rem;
+      height: 15rem;
+      width: 13rem;
+      /* transform: rotate(0deg); */
+    }
+    70% {
+      width: 13rem;
+    }
+    90% {
+      top: 3.5rem;
+      width: 13rem;
+    }
+    100% {
+      width: 31rem;
+      /* transform: rotate(0deg); */
+    }
+  }
+}
+@media only screen and (max-width: 660px) and (min-width: 415px) {
+  html{
+    font-size: 40%;
+  }
+  .lan-page .learn-mor-box{
+    height: 35rem;
+  }
+  @keyframes Flying {
+    0% {
+      top: 101rem;
+      left: 110%;
+      height: 15rem;
+      width: 13rem;
+      /* transform: rotate(90deg); */
+    }
+    40% {
+      left: 5%;
+      top: 101rem;
+      height: 15rem;
+      width: 13rem;
+      /* transform: rotate(0deg); */
+    }
+    60% {
+      left: 5%;
+      top: 101rem;
+      height: 15rem;
+      width: 13rem;
+      /* transform: rotate(0deg); */
+    }
+    70% {
+      width: 13rem;
+    }
+    90% {
+      top: 4.5rem;
+      width: 13rem;
+    }
+    100% {
+      width: 31rem;
+      /* transform: rotate(0deg); */
+    }
+  }
+}
+/*////////////////////Mobile Lan-page////////////////////////////*/
+/*////////////////////Mobile Lan-page////////////////////////////*/
+/*////////////////////Mobile Lan-page////////////////////////////*/

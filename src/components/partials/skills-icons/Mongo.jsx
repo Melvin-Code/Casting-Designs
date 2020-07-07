@@ -1,12 +1,28 @@
 import React, { Component } from "react";
-
+import Radium from "radium"
 class Mongo extends Component {
   render() {
+    let iconBox={
+      width: this.props.lBsize,
+      height: this.props.lBsize
+    }
+    let svgIcon={
+      width: this.props.lBsize,
+      height: this.props.lBsize
+    }
+    let svg={
+      width: this.props.lBsize,
+      
+    }
+    let p={
+      fontSize: this.props.lBsize,
+      
+    }
     return (
-      <div className="skill-box">
-        <div className="icon-box setter">
-          <div id="svg-icon">
-            <svg viewBox="0 0 128 128">
+      <div  className="skill-box">
+        <div style={iconBox} className="icon-box setter">
+          <div style={svgIcon} id="svg-icon">
+            <svg style={svg} viewBox="0 0 128 128">
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
@@ -106,10 +122,10 @@ class Mongo extends Component {
             </svg>
           </div>
         </div>
-        <p className="MD">MongoDB</p>
+        <p style={p} className="MD">MongoDB</p>
       </div>
     );
   }
 }
 
-export default Mongo;
+export default Radium(Mongo);

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Radium from "radium"
 class Css extends Component {
   render() {
     let iconBox={
@@ -57,4 +57,4 @@ class Css extends Component {
   }
 }
 
-export default Css;
+export default Radium(Css);
