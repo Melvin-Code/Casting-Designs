@@ -21,9 +21,15 @@ class WorkCard extends Component {
         size: null
       };
       componentDidMount(){
+        if(window.innerWidth >=920){
+        this.setState({
+          size: 'normal'
+        })
+      }else {
         this.setState({
           size: window.innerWidth
         })
+      }
       }
       handleResize=()=> {
          let widthScreen = window.innerWidth
