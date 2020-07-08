@@ -1002,7 +1002,9 @@ justify-content: space-around;
 /*////////////////////Mobile About-page////////////////////////////*/
 /*////////////////////Mobile About-page////////////////////////////*/
 @media only screen and (max-width: 415px) {
-  
+  .work-page .work-card-container{
+  top: 15%;
+  }
 }
 @media only screen and (max-width: 660px) {
   .about-page .about-page-holder1{
@@ -1013,6 +1015,7 @@ justify-content: space-around;
     position: relative;
     width: 43rem;
     height: 90rem;
+    top: 45%;
   }
   .about-page .about-page-holder1  #about-setter{
     display: flex;
@@ -1071,7 +1074,7 @@ justify-content: space-around;
 @media only screen and (max-width: 661px) {
   .contact-page .contact-box {
     width: 55rem;
-    top: 40%;
+    top: 35%;
   }
   .contact-box .setter .form-box .prWords-holder .prWords-box .preWords-container {
     margin-bottom: 1.5rem;
@@ -1107,6 +1110,7 @@ justify-content: space-around;
   background-color: transparent;
 }
 }
+
 /*////////////////////Mobile contact-page////////////////////////////*/
 /*////////////////////Mobile contact-page////////////////////////////*/
 /*////////////////////Mobile contact-page////////////////////////////*/
