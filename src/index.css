@@ -1010,12 +1010,12 @@ justify-content: space-around;
   .about-page .about-page-holder1{
     width: 60rem;
     height: 90rem;
+    top: 45%;
   }
  .about-page .about-page-holder1 #about-setter{
     position: relative;
     width: 43rem;
     height: 90rem;
-    top: 45%;
   }
   .about-page .about-page-holder1  #about-setter{
     display: flex;
