@@ -872,6 +872,7 @@ justify-content: space-around;
   .lan-page .learn-mor-box{
     width: 51rem;
     height: 52rem;
+    top: 40%;
     /* animation-name: magicText414; */
   }
   @keyframes magicText {
