@@ -149,7 +149,7 @@ class WorkCard extends Component {
                   {this.props.siteText}
                 </p>
                 <div className="btns-container">
-                  <Link to={this.props.gitLink}>
+                  <a href={this.props.gitLink}>
                     <Buttons
                       
                       text={<p>Read the code</p>}
@@ -163,8 +163,8 @@ class WorkCard extends Component {
                       height1={this.chosingSize('30px','30px', '40px', '40px')}
                       
                     />
-                  </Link>
-                  <Link to={this.props.liveLink}>
+                  </a>
+                  <a href={this.props.liveLink}>
                     <Buttons
                       text={<p>View the site</p>}
                       background="#9fb1bb"
@@ -176,7 +176,7 @@ class WorkCard extends Component {
                       width1={this.chosingSize('50px','60px', '70px', '100px')}
                       height1={this.chosingSize('30px','30px', '40px', '40px')}
                     />
-                  </Link>
+                  </a>
                 </div>
               </div>
               <div className={`shadowing ${this.hideOrShow()}`}>
