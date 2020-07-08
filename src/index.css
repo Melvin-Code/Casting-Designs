@@ -898,22 +898,7 @@ justify-content: space-around;
       height: 52rem;
     }
   }
-  @keyframes FlyingLogo {
-    0%{
-
-    }
-    100%{
-
-    }
-  }
-  @keyframes Flying {
-    0%{
-
-    }
-    100%{
-
-    }
-  }
+ 
   .lan-page .learn-mor-box .intro-text > span{
     font-size: 5.7rem ;
   }
@@ -967,6 +952,12 @@ justify-content: space-around;
   }
   .lan-page .learn-mor-box{
     height: 35rem;
+  }
+  .navbar .Fly-logo-box {
+    animation-delay: 100000000000s;
+  }
+  .navbar .Fly-logo-box .logo{
+    animation-delay: 100000000000s;
   }
   @keyframes Flying {
     0% {
