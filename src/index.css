@@ -872,7 +872,7 @@ justify-content: space-around;
   .lan-page .learn-mor-box{
     width: 51rem;
     height: 52rem;
-    top: 40%;
+    top: 35%;
     /* animation-name: magicText414; */
   }
   @keyframes magicText {
@@ -900,7 +900,7 @@ justify-content: space-around;
       box-shadow: none;
     }
     100% {
-      top: 50%;
+      top: 35%;
       height: 52rem;
     }
   }
@@ -1071,7 +1071,7 @@ justify-content: space-around;
 @media only screen and (max-width: 661px) {
   .contact-page .contact-box {
     width: 55rem;
-    
+    top: 40%;
   }
   .contact-box .setter .form-box .prWords-holder .prWords-box .preWords-container {
     margin-bottom: 1.5rem;
