@@ -4,7 +4,9 @@ import WorkCard from "./partials/WorkCard";
 
 class Work extends Component {
   
+  
   render() {
+    
     return (
       <div className="work-page setter">
       <div className="work-card-container">
@@ -80,6 +82,7 @@ class Work extends Component {
             Heroku='active'
             lBsize='2rem'
         />
+        
         
         {console.log(this.state)}
       </div>

@@ -18,7 +18,45 @@ class WorkCard extends Component {
         over: false,
         out: true,
         start: true,
+        size: null
       };
+      componentDidMount(){
+        this.setState({
+          size: window.innerWidth
+        })
+      }
+      handleResize=()=> {
+         let widthScreen = window.innerWidth
+        if(widthScreen <= 414 ){
+          this.setState({
+            size: 414
+          })
+        }else if(widthScreen<=920 && widthScreen >= 661){
+          this.setState({
+            size: 920
+          })
+        }else if(widthScreen<=660 && widthScreen>=415){
+          this.setState({
+            size: 660
+          })
+        }else if(widthScreen>=920){
+          this.setState({
+            size: 'normal'
+          })
+        }
+    
+      }
+      chosingSize=(small, mid, big, normal)=>{
+        if(this.state.size<=415 ){
+          return small
+        }else if (this.state.size<=920 && this.state.size >= 661){
+          return big
+        }else if(this.state.size>=414 && this.state.size <= 660){
+          return mid
+        }else if(this.state.size === 'normal'){
+          return normal
+        }
+      }
       hideOrShow = () => {
         if (
           this.state.over === false &&
@@ -81,7 +119,8 @@ class WorkCard extends Component {
         let siteName={
           color: this.props.fontColor
         }
-        
+        window.addEventListener('resize', this.handleResize)
+      window.addEventListener('load', this.handleResize)
         
         return (
             
@@ -118,14 +157,11 @@ class WorkCard extends Component {
                       font="1.5rem"
                       weight="bolder"
                       border="solid 1px #91C9FF"
-                      polyWidth="100"
-                      polyheight="40"
-                      width1="100px"
-                      width2="100px"
-                      width3="100px"
-                      height1="40px"
-                      height2="40px"
-                      height3="40px"
+                      polyWidth={this.chosingSize('52','62', '72', '102')}
+                      polyheight={this.chosingSize('30','30', '40', '40')}
+                      width1={this.chosingSize('52px','62px', '72px', '102px')}
+                      height1={this.chosingSize('30px','30px', '40px', '40px')}
+                      
                     />
                   </Link>
                   <Link to={this.props.liveLink}>
@@ -135,14 +171,10 @@ class WorkCard extends Component {
                       font="1.5rem"
                       weight="bolder"
                       border="solid 1px #91C9FF"
-                      polyWidth="100"
-                      polyheight="40"
-                      width1="100px"
-                      width2="100px"
-                      width3="100px"
-                      height1="40px"
-                      height2="40px"
-                      height3="40px"
+                      polyWidth={this.chosingSize('50','60', '70', '100')}
+                      polyheight={this.chosingSize('30','30', '40', '40')}
+                      width1={this.chosingSize('50px','60px', '70px', '100px')}
+                      height1={this.chosingSize('30px','30px', '40px', '40px')}
                     />
                   </Link>
                 </div>

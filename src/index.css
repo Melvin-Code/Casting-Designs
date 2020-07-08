@@ -102,6 +102,7 @@ button {
   justify-content: flex-end;
   align-items: center;
   width: auto;
+  margin-right: 1.5rem;
 }
 .navbar .navbar-box #nav-link {
   text-decoration: none;
@@ -850,10 +851,19 @@ justify-content: space-around;
 /*////////////////////Mobile Lan-page////////////////////////////*/
 /*////////////////////Mobile Lan-page////////////////////////////*/
 
-@media  screen and (max-width: 414px) {
+
+@media screen and (max-width: 414px) and (min-width: 361px) {
   html{
     font-size: 35%;
   }
+} 
+@media screen and (max-width: 360px) and (min-width: 320px) {
+  html{
+    font-size: 30%;
+  }
+} 
+@media  screen and (max-width: 414px)  {
+  
   .lan-page .learn-mor-box{
     width: 51rem;
     height: 52rem;
@@ -1023,9 +1033,7 @@ justify-content: space-around;
     width: 100%;
     height: 50%;
   }
-  #shadow-wraper2{
-        
-  }
+  
   .about-page .about-page-holder1 .left-half {
     position: relative;
     width: auto;
@@ -1076,6 +1084,36 @@ justify-content: space-around;
   .contact-box .setter .form-box .prWords-holder .prWords-box .preWords-container {
     margin-bottom: 1.5rem;
   }
+  /* .contact-box #contact-btn{
+    font-size: 5rem !important;
+  } */
+  ::-moz-selection {
+  background-color: transparent;
+  color: white;
+}
+
+::selection {
+  background-color: transparent;
+  color: white;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px transparent;
+  box-shadow: inset 0 0 6px transparent;
+  border-radius: 10px;
+  background-color: transparent
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 0 6px transparent;
+  box-shadow: inset 0 0 6px transparent;
+  background-color: transparent;
+}
 }
 /*////////////////////Mobile contact-page////////////////////////////*/
 /*////////////////////Mobile contact-page////////////////////////////*/

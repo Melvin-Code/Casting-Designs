@@ -12,7 +12,47 @@ export default class Form extends React.Component {
       email: "",
       writtenName: "Fill with your name",
       writtenMessage: "Now write your message",
+      size: null
     };
+  }
+ 
+  componentDidMount(){
+    this.setState({
+      size: window.innerWidth
+    })
+  }
+
+  handleResize=()=> {
+     let widthScreen = window.innerWidth
+    if(widthScreen <= 414 ){
+      this.setState({
+        size: 414
+      })
+    }else if(widthScreen<=920 && widthScreen >= 661){
+      this.setState({
+        size: 920
+      })
+    }else if(widthScreen<=660 && widthScreen>=415){
+      this.setState({
+        size: 660
+      })
+    }else if(widthScreen>=920){
+      this.setState({
+        size: 'normal'
+      })
+    }
+
+  }
+  chosingSize=(small, mid, big, normal)=>{
+    if(this.state.size<=415 ){
+      return small
+    }else if (this.state.size<=920 && this.state.size >= 661){
+      return big
+    }else if(this.state.size>=414 && this.state.size <= 660){
+      return mid
+    }else if(this.state.size === 'normal'){
+      return normal
+    }
   }
   handleChange = (e) => {
     this.setState({
@@ -84,6 +124,8 @@ export default class Form extends React.Component {
     }
   };
   render() {
+    window.addEventListener('resize', this.handleResize)
+      window.addEventListener('load', this.handleResize)
     const { status } = this.state;
     return (
       <form
@@ -142,14 +184,10 @@ export default class Form extends React.Component {
             text={this.state.next < 2? 'Next': 'Submit'}
             font="2.8rem"
             weight="bolder"
-            polyWidth="130"
-            polyheight='50' 
-            width1="130px"
-            width2="130px"
-            width3="130px"
-            height1="50px"
-            height2="50px"
-            height3="50px"
+            polyWidth= {this.chosingSize('50','60', '70', '130')}
+              polyheight= {this.chosingSize('30', '30','40', '59')}
+              width1= {this.chosingSize('50px','60px', '70px', '130px')}
+              height1= {this.chosingSize('30px','30px', '40px', '59px')}
             newBorder="1px solid #91C9FF"
             onClicker = {this.state.next < 3 ? this.nextCounter: null}
           />

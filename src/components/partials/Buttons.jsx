@@ -58,7 +58,7 @@ class Buttons extends Component {
                 className="hl-line"
               />
             </svg>
-            <span style={fonting}>{this.props.text}</span>
+            <span id="contact-btn" style={fonting}>{this.props.text}</span>
           </button>
         </div>
       </div>
