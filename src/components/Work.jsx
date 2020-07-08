@@ -67,7 +67,7 @@ class Work extends Component {
             mainColor='#282828'
             secondaryColor='#282828'
             lBBackground='#282828'
-            title='Team Generator'
+            title='Code Helper'
             logo="/CodeLogo.svg"
             logoTop='50%'
             logoWidth='5rem'
