@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import Buttons from "../Buttons";
 import { Link } from "react-router-dom";
-
+import prefix from 'react-prefixer';
+const styles = prefix({
+  userSelect: 'none'
+});
 class LearnMore extends Component {
   
   

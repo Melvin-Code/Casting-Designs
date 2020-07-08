@@ -852,17 +852,17 @@ justify-content: space-around;
 /*////////////////////Mobile Lan-page////////////////////////////*/
 
 
-@media screen and (max-width: 414px) and (min-width: 361px) {
+@media only screen and (max-width: 414px) and (min-width: 361px) {
   html{
     font-size: 35%;
   }
 } 
-@media screen and (max-width: 360px) and (min-width: 100px) {
+@media only screen and (max-width: 360px) and (min-width: 100px) {
   html{
     font-size: 30%;
   }
 } 
-@media  screen and (max-width: 414px)  {
+@media only screen and (max-width: 414px)  {
   .navbar .Fly-logo-box {
     animation-delay: 100000000000s;
   }
