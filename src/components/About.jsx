@@ -8,11 +8,13 @@ class About extends Component {
   render() {
     return (
       <div className="about-page ">
+      
          <div  className="about-page-holder1 setter ">
-         
+         <div id='about-setter'>
          <Background/>
          <Skills/>
          </div>
+      </div>
       </div>
     );
   }

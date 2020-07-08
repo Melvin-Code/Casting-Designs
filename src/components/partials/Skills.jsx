@@ -11,10 +11,52 @@ import Sass from "./skills-icons/Sass";
 import ReactJs from "./skills-icons/React";
 import Electron from "./skills-icons/Electron";
 class Skills extends Component {
+  state={
+    size:null
+  }
+  handleResize=()=> {
+    let widthScreen = window.innerWidth
+   if(widthScreen < 661 ){
+     this.setState({
+       size: 660
+     })
+   }else {
+     this.setState({
+       size: null,
+       render: '5s'
+     })
+   }
+
+ }
+ noAnimations=()=>{
+   if(window.innerWidth <= 870 && window.innerWidth >=460){
+     this.setState({
+       render: '0s'
+     })
+     
+   }else{
+     this.setState({
+       render: '.2s'
+     })
+   }
+ }
+ chosingSize=()=>{
+   if(this.state.size === 660){
+    
+   }else {
+     return <br/>
+   }
+ }
   render() {
+    let animation ={
+      transition: this.state.render
+    } 
+    
+    window.addEventListener('resize', this.noAnimations)
+      
     return (
       <div id="shadow-wraper1">
-        <div className="rigth-half setter page-boxes">
+        <div style={animation} className="rigth-half setter page-boxes">
           <div className="title-holder">
             <h2 className="box-text-title">My Skills</h2>
             {/* <hr></hr> */}

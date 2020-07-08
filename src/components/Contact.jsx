@@ -10,9 +10,10 @@ class Contact extends Component {
       <div className='setter'>
         <div className="form-text-box">
           <h2 className="form-text-main">Contact me</h2>
+          
           <p className="form-text-sub">
             Want to get in touch to know the wonderful things we can do
-            toguether. Well fill up this form or email me directly to
+            toguether. Well fill up this form or email me directly to<br/>
             casting-desings@gmail.com
           </p>
           <Form />

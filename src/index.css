@@ -307,6 +307,8 @@ button {
   clip-path: circle(100%);
   animation: MagicCircle;
   animation-duration: 1.5s;
+  overflow: hidden;
+  transition: .2s;
 }
 @keyframes MagicCircle {
   0%{
@@ -337,7 +339,7 @@ button {
 .contact-box .setter .form-text-box .form-text-sub {
   font-size: 3rem;
   font-weight: bolder;
-  margin: 1rem 0 7rem 0;
+  margin: 1rem 0 12rem 0;
 }
 .contact-box .setter .form-box {
   position: relative;
@@ -368,18 +370,19 @@ button {
   position: absolute;
     display: flex;
     flex-direction: row;
-    top: -5rem;
+    top: -10rem;
 }
 .contact-box .setter .form-box .prWords-holder .prWords-box {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   
 }
 .contact-box .setter .form-box .prWords-holder .prWords-box .preWords-container {
   background-color: rgba(255, 255, 255, 0.301);
   margin-right: 1rem;
   border-radius: 1rem;
-  
+  margin-bottom: 1.5rem;
 }
 @keyframes contactIcon{
   0%{
@@ -521,6 +524,10 @@ button {
   width: 90rem;
   height: 43rem;
 }
+.about-page .about-page-holder1 #about-setter{
+  width: auto;
+    height: auto;
+}
 .about-page .about-page-holder1 .left-half{
   clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
   width: 55.3%;
@@ -640,9 +647,9 @@ button {
 }
 .work-page .work-card-container{
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
-  transform: translate(-50%, -40%);
+  transform: translate(-50%);
   width: 90vw;
   display: flex;
     justify-content: space-evenly;
@@ -989,3 +996,87 @@ justify-content: space-around;
 /*////////////////////Mobile Lan-page////////////////////////////*/
 /*////////////////////Mobile Lan-page////////////////////////////*/
 /*////////////////////Mobile Lan-page////////////////////////////*/
+/*////////////////////Mobile About-page////////////////////////////*/
+/*////////////////////Mobile About-page////////////////////////////*/
+/*////////////////////Mobile About-page////////////////////////////*/
+@media only screen and (max-width: 415px) {
+  
+}
+@media only screen and (max-width: 660px) {
+  .about-page .about-page-holder1{
+    width: 60rem;
+    height: 90rem;
+  }
+ .about-page .about-page-holder1 #about-setter{
+    position: relative;
+    width: 43rem;
+    height: 90rem;
+  }
+  .about-page .about-page-holder1  #about-setter{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+  #shadow-wraper1{
+    filter: drop-shadow(-4px 1px 6px rgba(240, 238, 238, 0.418));
+    position: relative;
+    width: 100%;
+    height: 50%;
+  }
+  #shadow-wraper2{
+        
+  }
+  .about-page .about-page-holder1 .left-half {
+    position: relative;
+    width: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  }
+  .about-page .about-page-holder1 .left-half .title-holder{
+    margin-bottom: 1.5rem;
+  }
+  .about-page .about-page-holder1 .left-half .box-text-content{
+    font-size: 2.3rem;
+    padding: 2rem;
+    margin-top: 0rem;
+  }
+  .about-page .about-page-holder1 .rigth-half{
+    position: absolute;
+    width: 57rem;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    bottom: 8.4rem;
+  }
+  .about-page .about-page-holder1 .rigth-half .title-holder{
+    padding-left: 0;
+    margin-top: 3rem;
+    margin-bottom: .5rem;
+  }
+  .about-page .about-page-holder1 .rigth-half .box-text-sub{
+    padding: 2rem
+  }
+  .about-page .about-page-holder1 .rigth-half .box-text-sub .icon-container{
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 920px) and (min-width: 661px) {
+
+}
+
+
+/*////////////////////Mobile About-page////////////////////////////*/
+/*////////////////////Mobile About-page////////////////////////////*/
+/*////////////////////Mobile About-page////////////////////////////*/
+/*////////////////////Mobile contact-page////////////////////////////*/
+/*////////////////////Mobile contact-page////////////////////////////*/
+/*////////////////////Mobile contact-page////////////////////////////*/
+@media only screen and (max-width: 661px) {
+  .contact-page .contact-box {
+    width: 55rem;
+    
+  }
+  .contact-box .setter .form-box .prWords-holder .prWords-box .preWords-container {
+    margin-bottom: 1.5rem;
+  }
+}
+/*////////////////////Mobile contact-page////////////////////////////*/
+/*////////////////////Mobile contact-page////////////////////////////*/
+/*////////////////////Mobile contact-page////////////////////////////*/
