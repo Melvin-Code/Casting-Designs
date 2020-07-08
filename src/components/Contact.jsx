@@ -23,7 +23,7 @@ class Contact extends Component {
           <p className="social-sub">
             Hit me up are{" "}
             <a href='https://www.linkedin.com/in/melvingonzalez1/' className="linkedIn">
-              <i id="linkedIn" class="fab fa-linkedin-in"></i>
+              <i id="linkedIn" className="fab fa-linkedin-in"></i>
             </a>{" "}
             or check my code at{" "}
             <a href='https://github.com/Melvin-Code' className="git">

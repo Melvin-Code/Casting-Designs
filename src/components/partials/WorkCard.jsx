@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactJs from "./skills-icons/React";
 import Buttons from "./Buttons";
 import Radium from "radium"
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Css from "./skills-icons/Css";
 import Html from "./skills-icons/Html";
 import JavaScript from "./skills-icons/JavaScript";
