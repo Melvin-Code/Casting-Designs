@@ -863,7 +863,12 @@ justify-content: space-around;
   }
 } 
 @media  screen and (max-width: 414px)  {
-  
+  .navbar .Fly-logo-box {
+    animation-delay: 100000000000s;
+  }
+  .navbar .Fly-logo-box .logo{
+    animation-delay: 100000000000s;
+  }
   .lan-page .learn-mor-box{
     width: 51rem;
     height: 52rem;
@@ -953,12 +958,7 @@ justify-content: space-around;
   .lan-page .learn-mor-box{
     height: 35rem;
   }
-  .navbar .Fly-logo-box {
-    animation-delay: 100000000000s;
-  }
-  .navbar .Fly-logo-box .logo{
-    animation-delay: 100000000000s;
-  }
+ 
   @keyframes Flying {
     0% {
       top: 101rem;
