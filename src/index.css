@@ -852,12 +852,12 @@ justify-content: space-around;
 /*////////////////////Mobile Lan-page////////////////////////////*/
 
 
-@media only screen and (max-width: 414px)  {
+@media only screen and (max-width: 414px) and (min-width: 361px) {
   html{
     font-size: 35%;
   }
 } 
-@media only screen and (max-width: 360px)  {
+@media only screen and (max-width: 360px) and (min-width: 100px) {
   html{
     font-size: 30%;
   }
@@ -913,7 +913,7 @@ justify-content: space-around;
   }
   
 }
-@media only screen and (max-width: 920px)  {
+@media only screen and (max-width: 920px) and (min-width: 661px) {
   html{
     font-size: 45%;
   }
